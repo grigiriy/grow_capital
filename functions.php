@@ -43,7 +43,7 @@ function disable_wp_emojis_in_tinymce( $plugins ) {
 // start
 function theme_styles()
 {
-  wp_enqueue_style('master-style', get_template_directory_uri() . '/assets/css/fontello.css',[], STATIC_FILES_BUILD_VERSION);
+  wp_enqueue_style('fontello', get_template_directory_uri() . '/assets/css/fontello.css',[], STATIC_FILES_BUILD_VERSION);
   wp_enqueue_style('master-style', get_template_directory_uri() . '/assets/css/main.css',[], STATIC_FILES_BUILD_VERSION);
 }
 function theme_scripts()
