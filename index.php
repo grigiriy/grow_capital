@@ -5,7 +5,7 @@
 global $icons;
 
 get_header(); ?>
-
+<?php get_template_part( 'theme-helpers/template-parts/header')?>
 <section class="mb-50 pt-60 bg-grdn-up">
     <div class="container-w">
       <h2 class="txt-c txt-l-smd txt-l-sm mb-40">Ближайшие программы<br />по систематическому инвестированию</h2>
