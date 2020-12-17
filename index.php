@@ -13,7 +13,7 @@
         <div class="col-lg-4 lim-md lim-smd mb-30">
           <div class="card">
  
-                <div class="card-bg" style="background-image: url('/assets/img/vo-chto-investirovat.jpg');">
+                <div class="card-bg" style="background-image: url('<?= get_template_directory_uri();?>/assets/img/vo-chto-investirovat.jpg');">
                   <div class="bg-tr card-topbg">
                   <a href="#" class="fc-light">
                     <div class="svg-white">
@@ -61,7 +61,7 @@
         <div class="col-lg-4 lim-md lim-smd mb-30">
           <div class="card">
  
-                <div class="card-bg" style="background-image: url('/assets/img/vo-chto-investirovat.jpg');">          
+                <div class="card-bg" style="background-image: url('<?= get_template_directory_uri();?>/assets/img/vo-chto-investirovat.jpg');">          
                   <div class="bg-tr card-topbg">
                   <a href="#" class="fc-light">
                     <div class="svg-white">
@@ -116,7 +116,7 @@
         <div class="col-lg-4 lim-md lim-smd mb-30">
           <div class="card">
 
-                <div class="card-bg" style="background-image: url('/assets/img/vo-chto-investirovat.jpg');">
+                <div class="card-bg" style="background-image: url('<?= get_template_directory_uri();?>/assets/img/vo-chto-investirovat.jpg');">
                   <div class="bg-tr card-topbg">
                   <a href="#" class="fc-light">
                     <div class="svg-white">
@@ -187,7 +187,7 @@
                   <div class="card-head">
                     <div class="facecrd-125">
                       <figure class="mb-0">
-                        <img src="/assets/img/dmitrij-kozlov.jpg" alt="" class="brdr">
+                        <img src="<?= get_template_directory_uri();?>/assets/img/dmitrij-kozlov.jpg" alt="" class="brdr">
                         <figcaption>
                           <div class="pl-10 pl-0-sm">
                             <p class="h4">
@@ -221,7 +221,7 @@
                   <div class="card-head">
                     <div class="facecrd-125">
                       <figure class="mb-0">
-                        <img src="/assets/img/ivan-vladimirov.jpg" alt="" class="brdr">
+                        <img src="<?= get_template_directory_uri();?>/assets/img/ivan-vladimirov.jpg" alt="" class="brdr">
                         <figcaption>
                           <div class="pl-10 pl-0-sm">
                             <p class="h4">
@@ -335,7 +335,7 @@
           </div>
           <div class="facecrd-75 mt-20">
             <figure>
-              <img src="/assets/img/kalugin.jpg" class="brdr-circ" alt="" />
+              <img src="<?= get_template_directory_uri();?>/assets/img/kalugin.jpg" class="brdr-circ" alt="" />
               <figcaption>
                 <p class="h5">
                   Калугин Анатолий
@@ -351,7 +351,7 @@
           </div>
           <div class="facecrd-75 mt-20">
             <figure>
-              <img src="/assets/img/vasilenko.jpg" class="brdr-circ" alt="" />
+              <img src="<?= get_template_directory_uri();?>/assets/img/vasilenko.jpg" class="brdr-circ" alt="" />
               <figcaption>
                 <p class="h5">
                   Василенко Антон
@@ -367,7 +367,7 @@
           </div>
           <div class="facecrd-75 mt-20">
             <figure>
-              <img src="/assets/img/berdyanskiy.jpg" class="brdr-circ" alt="" />
+              <img src="<?= get_template_directory_uri();?>/assets/img/berdyanskiy.jpg" class="brdr-circ" alt="" />
               <figcaption>
                 <p class="h5">
                   Бердянский Семен
@@ -386,7 +386,7 @@
 Всё интересно и полезно, но не достаточно для того, чтобы сразу же начать применять в торговле. Больше введение в тему, которую однозначно стоит изучить. Для пассивных инвесторов может и норм, но тем, кто активно торгует придется вникать подробнее.          </div>
           <div class="facecrd-75 mt-20">
             <figure>
-              <img src="/assets/img/miheev.jpg" class="brdr-circ" alt="" />
+              <img src="<?= get_template_directory_uri();?>/assets/img/miheev.jpg" class="brdr-circ" alt="" />
               <figcaption>
                 <p class="h5">
                   Михеев Игорь
@@ -403,7 +403,7 @@
           </div>
           <div class="facecrd-75 mt-20">
             <figure>
-              <img src="/assets/img/zinina.jpg" class="brdr-circ" alt="" />
+              <img src="<?= get_template_directory_uri();?>/assets/img/zinina.jpg" class="brdr-circ" alt="" />
               <figcaption>
                 <p class="h5">
                   Зинина Ангелина
@@ -418,7 +418,7 @@
 По окончанию курса остался привкус горечи - никаких тебе быстрых миллионов, ну или если очень хочется, рискни и будь готов потерять всё. Все эти истории про проигравшихся в пух и прах трейдеров приобрели определённость. Почему так происходит, и что делать, чтобы избежать их участи и не пенять потом на то, что приложение брокера зависло. Без экселя в общем не обойтись.          </div>
           <div class="facecrd-75 mt-20">
             <figure>
-              <img src="/assets/img/hladin.jpg" class="brdr-circ" alt="" />
+              <img src="<?= get_template_directory_uri();?>/assets/img/hladin.jpg" class="brdr-circ" alt="" />
               <figcaption>
                 <p class="h5">
                   Хладин Дмитрий
@@ -695,14 +695,14 @@
             </div>
           </div>
           <div class="col-lg-5 step_image">
-            <img src="/assets/img/ill_1.jpg" alt="" />
+            <img src="<?= get_template_directory_uri();?>/assets/img/ill_1.jpg" alt="" />
           </div>
         </div>
       </div>
       <div class="big_step">
         <div class="row">
           <div class="col-lg-5 step_image">
-            <img src="/assets/img/ill_2.jpg" alt="" />
+            <img src="<?= get_template_directory_uri();?>/assets/img/ill_2.jpg" alt="" />
           </div>
           <div class="col-lg-7 step_content">
             <div class="step_label">2</div>
@@ -733,7 +733,7 @@
             </div>
           </div>
           <div class="col-lg-5 step_image">
-            <img src="/assets/img/ill_1.jpg" alt="" />
+            <img src="<?= get_template_directory_uri();?>/assets/img/ill_1.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -897,7 +897,7 @@
 
       <div class="row">
         <div class="col-lg-4 mb-30 txt-c">
-          <img src="/assets/img/pac.png" class="icon-75" alt="" />
+          <img src="<?= get_template_directory_uri();?>/assets/img/pac.png" class="icon-75" alt="" />
           <div class="pd-20 pd-0-sm">
             <p class="h5">Средства индивидуальной защиты</p>
             <p>
@@ -907,7 +907,7 @@
           </div>
         </div>
         <div class="col-lg-4 mb-30 txt-c">
-          <img src="/assets/img/pac.png" class="icon-75" alt="" />
+          <img src="<?= get_template_directory_uri();?>/assets/img/pac.png" class="icon-75" alt="" />
           <div class="pd-20 pd-0-sm">
             <p class="h5">Средства индивидуальной защиты</p>
             <p>
@@ -917,7 +917,7 @@
           </div>
         </div>
         <div class="col-lg-4 mb-30 txt-c">
-          <img src="/assets/img/pac.png" class="icon-75" alt="" />
+          <img src="<?= get_template_directory_uri();?>/assets/img/pac.png" class="icon-75" alt="" />
           <div class="pd-20 pd-0-sm">
             <p class="h5">Средства индивидуальной защиты</p>
             <p>
@@ -940,7 +940,7 @@
                 <div class="col-lg-12 col-md-6 col-sm-12">
                   <div class="facecrd-75">
                     <figure>
-                      <img src="/assets/img/doc.png" alt="" />
+                      <img src="<?= get_template_directory_uri();?>/assets/img/doc.png" alt="" />
                       <figcaption>
                         <p class="h4">
                           <a href="">Для врачей</a>
@@ -985,7 +985,7 @@
                 <div class="col-lg-12 col-md-6 col-sm-12">
                   <div class="facecrd-75">
                     <figure>
-                      <img src="/assets/img/pac.png" alt="" />
+                      <img src="<?= get_template_directory_uri();?>/assets/img/pac.png" alt="" />
                       <figcaption>
                         <p class="h4">
                           <a href="">Для пациентов</a>
@@ -1025,7 +1025,7 @@
         <div class="col-lg-4 mb-30">
           <div class="card">
             <div class="card-body txt-c">
-              <img src="/assets/img/pac.png" class="icon-75" alt="" />
+              <img src="<?= get_template_directory_uri();?>/assets/img/pac.png" class="icon-75" alt="" />
               <p class="h5">Средства индивидуальной защиты</p>
               <p>
                 Всё, что нужно знать, чтоб избежать заражения, и правильно
@@ -1059,7 +1059,7 @@
             <div class="row">
               <div class="col-lg-12 col-sm-5">
                 <div class="card-img">
-                  <img src="/assets/img/shumoizolyaciya-steni-tonkaya.jpg" alt="" />
+                  <img src="<?= get_template_directory_uri();?>/assets/img/shumoizolyaciya-steni-tonkaya.jpg" alt="" />
                 </div>
               </div>
               <div class="col-lg-12 col-sm-7">
@@ -1155,7 +1155,7 @@
                 <div class="card-head">
                   <div class="facecrd-75">
                     <figure>
-                      <img src="/assets/img/pac.png" alt="" />
+                      <img src="<?= get_template_directory_uri();?>/assets/img/pac.png" alt="" />
                       <figcaption>
                         <p class="h4">
                           <a href="">Для пациентов</a>
@@ -1232,7 +1232,7 @@
                 <div class="card-head">
                   <div class="facecrd-75">
                     <figure>
-                      <img src="/assets/img/pac.png" alt="" />
+                      <img src="<?= get_template_directory_uri();?>/assets/img/pac.png" alt="" />
                       <figcaption>
                         <p class="h4">
                           <a href="">Для пациентов</a>
@@ -1315,7 +1315,7 @@
             <div class="row">
               <div class="col-lg-12 col-sm-5">
                 <div class="card-img">
-                  <img src="/assets/img/kupit-tonkuyu-shumoizolyaciyu.jpg" alt="" class="brdr-1a2" />
+                  <img src="<?= get_template_directory_uri();?>/assets/img/kupit-tonkuyu-shumoizolyaciyu.jpg" alt="" class="brdr-1a2" />
                 </div>
               </div>
               <div class="col-lg-12 col-sm-7">
@@ -1354,7 +1354,7 @@
             <div class="row">
               <div class="col-lg-12 col-sm-5">
                 <div class="card-img">
-                  <img src="/assets/img/kupit-tonkuyu-shumoizolyaciyu.jpg" alt="" class="brdr-1a2" />
+                  <img src="<?= get_template_directory_uri();?>/assets/img/kupit-tonkuyu-shumoizolyaciyu.jpg" alt="" class="brdr-1a2" />
                 </div>
               </div>
               <div class="col-lg-12 col-sm-7">
@@ -1393,7 +1393,7 @@
             <div class="row">
               <div class="col-lg-12 col-sm-5">
                 <div class="card-img">
-                  <img src="/assets/img/kupit-tonkuyu-shumoizolyaciyu.jpg" alt="" class="brdr-1a2" />
+                  <img src="<?= get_template_directory_uri();?>/assets/img/kupit-tonkuyu-shumoizolyaciyu.jpg" alt="" class="brdr-1a2" />
                 </div>
               </div>
               <div class="col-lg-12 col-sm-7">
@@ -1434,7 +1434,7 @@
     <div class="container-w">
       <div class="row">
         <div class="col-lg-5 hider-sm-md mb-30">
-          <img src="/assets/img/shumoizolyaciya-potolka.png" alt="" />
+          <img src="<?= get_template_directory_uri();?>/assets/img/shumoizolyaciya-potolka.png" alt="" />
         </div>
         <div class="col-lg-7 mb-30">
           <div class="main-price">
@@ -1466,7 +1466,7 @@
     <div class="container-w">
       <div class="row">
         <div class="col-lg-5 hider-sm-md mb-30">
-          <img src="/assets/img/shumoizolyaciya-potolka.png" alt="" />
+          <img src="<?= get_template_directory_uri();?>/assets/img/shumoizolyaciya-potolka.png" alt="" />
         </div>
         <div class="col-lg-7 mb-30">
           <div class="main-price">
@@ -1570,7 +1570,7 @@
       <div class="brdl-t brdc">
         <div class="row mb-10">
           <div class="col-sm-4 mb-30">
-            <a href="#"> <img src="/assets/img/unnamed.jpg" alt="" class="mt-0" /></a>
+            <a href="#"> <img src="<?= get_template_directory_uri();?>/assets/img/unnamed.jpg" alt="" class="mt-0" /></a>
           </div>
           <div class="col-sm-8 mb-30 pt-30 pt-0-sm">
             <p class="h3">
@@ -1611,14 +1611,14 @@
           <p>К сожалению, не везде есть технические возможности для проведения терапии на самом современном уровне, но в
             тоже время в России есть очень достойные центры, где проводят лечение по международным протоколам.</p>
           <figure>
-            <img src="/assets/img/pic.jpg" alt="" />
+            <img src="<?= get_template_directory_uri();?>/assets/img/pic.jpg" alt="" />
             <figcaption>Коментарий к картинке фигуркэпшин</figcaption>
           </figure>
           <p>Врачи радиотерапевты и радиохирурги анализируют присланные вами документы и на основании международных
             протоколов лечения дают заключение, о том какой вид лучевой терапии необходим и на каком аппарате. Благодаря
             этому Вы сможете сделать осознанный выбор лечения и понять, что лучше при вашем заболевании: терапия на
             линейном ускорителе, протонная терапия, гамма нож или кибер нож.</p>
-          <img src="/assets/img/pic.jpg" alt="" />
+          <img src="<?= get_template_directory_uri();?>/assets/img/pic.jpg" alt="" />
           <p>Мнение экспертов о виде и режиме лечения. Информацию возможности нескольких видов лечения, например лечение
             можно проводить и на кибер ноже и на линейном ускорителе.</p>
           <ul>

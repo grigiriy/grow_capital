@@ -12,13 +12,13 @@
       <div class="container-w">
         <div class="d-flex flex-center">
           <div class="mr-auto">
-            <a href="/"><img src="img/logo.png" alt="Grow Capital — обучение грамотному управлению инвестициями"
+            <a href="/"><img src="<?= get_template_directory_uri();?>/assets/img/logo.png" alt="Grow Capital — обучение грамотному управлению инвестициями"
                 class="logo" itemprop="logo" /></a>
-            <a href="/"><img src="img/logo-slicky.png" class="logo-sticky" alt="" /></a>
-            <a href="/"><img src="img/logo-small.png" class="logo-small" alt="" /></a>
+            <a href="/"><img src="<?= get_template_directory_uri();?>/assets/img/logo-slicky.png" class="logo-sticky" alt="" /></a>
+            <a href="/"><img src="<?= get_template_directory_uri();?>/assets/img/logo-small.png" class="logo-small" alt="" /></a>
           </div>
           <div class="ml-auto px-40 mg-auto-9" itemprop="telephone">
-            <img src="img/icons.png" class="" />
+            <img src="<?= get_template_directory_uri();?>/assets/img/icons.png" class="" />
           </div>
           <div class="btn-header-wrappeer">
             <div class="mb-f-05 txt-c none"><a href="" class="fc-dark fd-n fs-xs">Вход</a>  |  <a href=""
@@ -62,7 +62,7 @@
   </div>
 
   <header class="mt-0">
-    <section class="image_bg" style="background-image: url('img/2-6.jpg');">
+    <section class="image_bg" style="background-image: url(<?= get_template_directory_uri();?>/assets/img/2-6.jpg);">
       <div class="container-w">
         <div class="pt-60 pb-60 fc-light">
           <div class="lim-12">
