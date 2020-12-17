@@ -76,3 +76,7 @@ add_action('carbon_register_fields', 'crb_register_custom_fields');
 function crb_register_custom_fields() {
   include_once __DIR__ . '/theme-helpers/custom-fields/base.php';
 }
+
+
+require_once __DIR__ . '/theme-helpers/cpt.php';
+add_action ( 'init', 'true_register_post_type_init' );
