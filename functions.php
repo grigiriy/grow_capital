@@ -43,11 +43,13 @@ function disable_wp_emojis_in_tinymce( $plugins ) {
 // start
 function theme_styles()
 {
+  wp_enqueue_style('master-style', get_template_directory_uri() . '/assets/css/fontello.css',[], STATIC_FILES_BUILD_VERSION);
   wp_enqueue_style('master-style', get_template_directory_uri() . '/assets/css/main.css',[], STATIC_FILES_BUILD_VERSION);
 }
 function theme_scripts()
 {
-  wp_enqueue_script('master-script', get_template_directory_uri() . '/assets/js/main.js',['jquery'], STATIC_FILES_BUILD_VERSION, true);
+  wp_enqueue_script('remodal', get_template_directory_uri() . '/assets/js/remodal.js',['jquery'], STATIC_FILES_BUILD_VERSION, true);
+  wp_enqueue_script('master-script', get_template_directory_uri() . '/assets/js/main.js',['remodal'], STATIC_FILES_BUILD_VERSION, true);
 }
 add_action('wp_print_styles', 'theme_styles');
 add_action('wp_print_styles', 'theme_scripts');
