@@ -32,7 +32,7 @@ function true_register_post_type_init()
             'revisions',
         )
       ];
-    register_post_type ( 'events', $args );
+    register_post_type ( 'webinars', $args );
 
 } //function close    
 ?>
