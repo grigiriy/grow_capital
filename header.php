@@ -70,6 +70,7 @@
               );
               ?>
               <?= wp_nav_menu($params) ?>
+            </ul>
           </div>
         </div>
       </div>

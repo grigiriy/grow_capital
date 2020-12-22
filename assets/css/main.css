@@ -957,6 +957,10 @@ mark,
   color: #fff;
 }
 
+ul.fc-light li a{
+  color: #fff;
+}
+
 .fc-dark {
   color: #000;
 }

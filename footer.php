@@ -4,17 +4,19 @@
       <div class="row">
         <div class="col-md-7 mt-20">
           <p class="h4 mb-20">Основные разделы на сайте</p>
-          <ul class="list-inline list-decor list-angle-right mb-20">
-            <li><a href="#" class="fc-light">Проект и команда</a></li>
-            <li>
-              <a href="#" class="fc-light">Знания и аналитика</a>
-            </li>
-            <li>
-              <a href="#" class="fc-light">Образовательные программы</a>
-            </li>
-            <li>
-              <a href="#" class="fc-light">Сервисы</a>
-            </li>
+          <ul class="list-inline list-decor list-angle-right mb-20 fc-light">
+            <?php
+              $params = array(
+                'container' => false, // Без div обертки
+                'echo' => false, // Чтобы можно было его предварительно вернуть
+                'after' => '<span class="submenu-dropdown-toggle"></span>',
+                'items_wrap' => '%3$s', // Разделитель элементов
+                'depth' => 2, // Глубина вложенности
+                // 'theme_location' => wp_is_mobile() ? 'mob_header_menu' : 'header_menu',
+                'theme_location' => 'header_menu',
+              );
+              ?>
+              <?= wp_nav_menu($params) ?>
           </ul>
         </div>
         <div class="col-md-5 mt-20">
