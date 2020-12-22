@@ -74,6 +74,7 @@ function crb_register_custom_fields() {
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/base.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/reviews.php';
+  include_once __DIR__ . '/theme-helpers/custom-fields/post.php';
 }
 
 add_action( 'after_setup_theme', 'crb_load', 1000);
