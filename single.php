@@ -56,7 +56,7 @@ get_header(); ?>
         <div class="infobl">
           <?php the_content(); ?>
         </div>
-
+        <?php get_template_part('theme-helpers/template-parts/bottom','widget'); ?>
       </div>
     </div>
   </div>
