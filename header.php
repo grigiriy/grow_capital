@@ -3,7 +3,8 @@
   <head>
   	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  	<?php wp_head() ?>
+    <?php wp_head() ?>
+    <script src="https://yastatic.net/share2/share.js" async></script>
   </head>
 
   <body id="page-top">
@@ -17,8 +18,13 @@
             <a href="/"><img src="<?= get_template_directory_uri();?>/assets/img/logo-slicky.png" class="logo-sticky" alt="" /></a>
             <a href="/"><img src="<?= get_template_directory_uri();?>/assets/img/logo-small.png" class="logo-small" alt="" /></a>
           </div>
-          <div class="ml-auto px-40 mg-auto-9" itemprop="telephone">
-            <img src="<?= get_template_directory_uri();?>/assets/img/icons.png" class="" />
+          <div class="ml-auto px-40 mg-auto-9 social-wrapper">
+            <?php global $icons; ?>
+            <a href="<?= carbon_get_theme_option('vk');?>"><?= $icons->vk; ?></a>
+            <a href="<?= carbon_get_theme_option('fb');?>"><?= $icons->fb; ?></a>
+            <a href="<?= carbon_get_theme_option('ig');?>"><?= $icons->ig; ?></a>
+            <a href="<?= carbon_get_theme_option('tg');?>"><?= $icons->tg; ?></a>
+            <a href="<?= carbon_get_theme_option('yt');?>"><?= $icons->yt; ?></a>
           </div>
           <div class="btn-header-wrappeer">
             <div class="mb-f-05 txt-c none"><a href="" class="fc-dark fd-n fs-xs">Вход</a>  |  <a href=""
@@ -45,18 +51,6 @@
       <div class="container-w">
         <div class="row">
           <div class="col-12">
-            <!-- <ul id="mainnav-menu" class="navigation-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
-              <li><a href="/ceny-na-shumoizolyaciyu-potolka">Проект и команда</a></li>
-              <li>
-                <a href="/materialy-dlya-shumoizolyacii-potolka">Знания и аналитика</a>
-              </li>
-              <li>
-                <a href="/materialy-dlya-shumoizolyacii-sten">Образовательные программы</a>
-              </li>
-              <li>
-                <a href="/materialy-dlya-shumoizolyacii-sten">Сервисы</a>
-              </li>
-            </ul> -->
             <ul id="mainnav-menu" class="navigation-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
               <?php
               $params = array(

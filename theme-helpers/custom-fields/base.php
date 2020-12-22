@@ -11,5 +11,6 @@ Container::make( 'theme_options', 'Опции' )
     Field::make( 'text', 'vk', 'VK' ),
     Field::make( 'text', 'fb', 'Facebook' ),
     Field::make( 'text', 'ig', 'Instagram' ),
-    Field::make( 'text', 'yt', 'Youtube' )
+    Field::make( 'text', 'yt', 'Youtube' ),
+    Field::make( 'text', 'tg', 'Telegram' )
 ]);

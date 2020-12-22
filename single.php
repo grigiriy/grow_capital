@@ -19,11 +19,15 @@ get_header(); ?>
       <div class="col-lg-3 hider-9">
         <div class="mb-30 pr-60">
           <div class="fw-6 mb-f-07">Оглавление</div>
-          <ul class="fs-s mb-30 list-sidebar">
-            <?php
-            set_query_var('post_id',$post->ID);
-            get_template_part('theme-helpers/template-parts/contents','list'); ?>
-          </ul>
+          <div class="d-flex">
+            <ul class="fs-s mb-30 list-sidebar">
+              <?php
+              set_query_var('post_id',$post->ID);
+              get_template_part('theme-helpers/template-parts/contents','list');
+              ?>
+            </ul>
+            <?php get_template_part('theme-helpers/template-parts/share','block'); ?>
+          </div>
         </div>
       </div>
       <div class="col-lg-9">
