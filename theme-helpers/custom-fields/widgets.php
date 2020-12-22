@@ -123,17 +123,39 @@ Block::make(__('Webinar Form'))
 
 
 Block::make(__('Formula'))
-->add_fields([
-  Field::make( 'image', 'formula_image', __( 'Formula' ) ),
-  Field::make( 'text', 'alt', __( 'image alt' ) ),
-])
-->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+  ->add_fields([
+    Field::make('image', 'formula_image', __('Formula')),
+    Field::make('text', 'alt', __('image alt')),
+  ])
+  ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
 ?>
 
-<div class="txt-c">
-  <img src="<?= wp_get_attachment_image_url( $fields['formula_image'], 'full' ); ?>" alt="<?= esc_html( $fields['alt'] );?>" class="formula">
-</div><!-- /.txt-c -->
+  <div class="txt-c">
+    <img src="<?= wp_get_attachment_image_url($fields['formula_image'], 'full'); ?>" alt="<?= esc_html($fields['alt']); ?>" class="formula">
+  </div><!-- /.txt-c -->
 
 <?php
-});
+  });
+
+
+
+Block::make(__('Quote Extanded'))
+  ->set_icon('editor-quote')
+  ->add_fields([
+    Field::make('html', 'crb_information_quote')
+    ->set_html('<div style="color:blue; background: lightblue; border-radius:10px; padding: 20px;"></div>')
+  ])
+  ->set_inner_blocks( true )
+  ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+?>
+
+  <div class="blockquote">
+    <?= $inner_blocks; ?>
+  </div><!-- /.blockquote -->
+
+<?php
+  });
+
+
+
 ?>
