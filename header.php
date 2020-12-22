@@ -45,7 +45,7 @@
       <div class="container-w">
         <div class="row">
           <div class="col-12">
-            <ul id="mainnav-menu" class="navigation-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+            <!-- <ul id="mainnav-menu" class="navigation-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
               <li><a href="/ceny-na-shumoizolyaciyu-potolka">Проект и команда</a></li>
               <li>
                 <a href="/materialy-dlya-shumoizolyacii-potolka">Знания и аналитика</a>
@@ -56,7 +56,20 @@
               <li>
                 <a href="/materialy-dlya-shumoizolyacii-sten">Сервисы</a>
               </li>
-            </ul>
+            </ul> -->
+            <ul id="mainnav-menu" class="navigation-menu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+              <?php
+              $params = array(
+                'container' => false, // Без div обертки
+                'echo' => false, // Чтобы можно было его предварительно вернуть
+                'after' => '<span class="submenu-dropdown-toggle"></span>',
+                'items_wrap' => '%3$s', // Разделитель элементов
+                'depth' => 2, // Глубина вложенности
+                // 'theme_location' => wp_is_mobile() ? 'mob_header_menu' : 'header_menu',
+                'theme_location' => 'header_menu',
+              );
+              ?>
+              <?= wp_nav_menu($params) ?>
           </div>
         </div>
       </div>
