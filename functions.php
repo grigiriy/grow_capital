@@ -68,16 +68,20 @@ add_action(
   }
 );
 
-add_action( 'after_setup_theme', 'crb_load' );
+
+add_action('carbon_fields_register_fields', 'crb_register_custom_fields');
+function crb_register_custom_fields() {
+  include_once __DIR__ . '/theme-helpers/custom-fields/base.php';
+  include_once __DIR__ . '/theme-helpers/custom-fields/reviews.php';
+}
+
+add_action( 'after_setup_theme', 'crb_load', 1000);
 function crb_load() {
   require_once( 'vendor/autoload.php' );
   \Carbon_Fields\Carbon_Fields::boot();
 }
 
-add_action('carbon_register_fields', 'crb_register_custom_fields');
-function crb_register_custom_fields() {
-  include_once __DIR__ . '/theme-helpers/custom-fields/base.php';
-}
+
 
 require_once __DIR__ . '/theme-helpers/cpt.php';
 add_action ( 'init', 'true_register_post_type_init' );
