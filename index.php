@@ -379,9 +379,6 @@ get_header(); ?>
           </div>
         </div>
 
-      </div>
-      
-      <div class="row">
 
         <div class="col-lg-4">
           <div class="pd-20 bg-gray cool_review">
