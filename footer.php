@@ -51,7 +51,7 @@
       </div>
     </div>
 
-    <div class="remodal" data-remodal-id="modal">
+    <!-- <div class="remodal" data-remodal-id="modal">
       <button data-remodal-action="close" class="remodal-close"></button>
       <h4>Обратный звонок</h4>
       <form class="contactForm" novalidate id="modal_form" onsubmit="ym(55367455, 'reachGoal', 'modal'); return true;"
@@ -82,7 +82,10 @@
           <button class="btn" type="submit">Отправить</button>
         </div>
       </form>
-    </div>
+    </div> -->
+
+    <?php get_template_part( 'theme-helpers/template-parts/auth','modal' ); ?>
+
   </footer>
 <?php wp_footer() ?>
 </body>

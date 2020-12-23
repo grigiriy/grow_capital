@@ -194,7 +194,7 @@
   };
 }.call(void 0));
 
-('use strict');
+
 
 var dayOfWeek = 6; // 0 - Sunday; 1-6 - Monday-Saturday
 
@@ -262,7 +262,7 @@ function printDeadline(className, deadlineDateObject) {
   }
 }
 
-('use strict');
+
 
 jQuery(document).ready(function ($) {
   // Плавный скролл
@@ -313,7 +313,7 @@ var sta_settings = {
   exceptions: ''
 };
 
-('use strict');
+
 
 /**
  * stacktable.js
@@ -542,21 +542,21 @@ var sta_settings = {
   $('table').stacktable();
 })(jQuery);
 
-('use strict');
+
 
 function toggle_answer(e) {
   $(e).find('.answer').toggle(300);
   $(e).toggleClass('active');
 }
 
-('use strict');
+
 
 function toggle_burger(e) {
   $(e).toggleClass('active');
   $('#mainnav-menu').fadeToggle(300);
 }
 
-('use strict');
+
 
 jQuery(document).ready(function ($) {
   // Sticky side navigation
