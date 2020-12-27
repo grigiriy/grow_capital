@@ -27,7 +27,7 @@
             <a href="<?= carbon_get_theme_option('yt');?>"><?= $icons->yt; ?></a>
           </div>
           <div class="btn-header-wrappeer">
-            <div class="mb-f-05 txt-c none"><a href="#authModal" class="fc-dark fd-n fs-xs">Вход</a>  |  <a href="#authModal"
+            <div class="mb-f-05 txt-c none"><a href="<?= carbon_get_theme_option('login'); ?>" class="fc-dark fd-n fs-xs">Вход</a>  |  <a href="<?= carbon_get_theme_option('login'); ?>"
                 class="fc-dark fd-n fs-xs">Регистрация</a></div>
             <a href="#services" class="btn btn-ok">Полезные сервисы</a>
             <div class="txt-c none mt-10">
@@ -70,3 +70,6 @@
       </div>
     </nav>
   </div>
+  <?php
+  if(!is_user_logged_in()){ exit(); };
+  ?>
