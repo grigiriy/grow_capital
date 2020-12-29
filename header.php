@@ -27,9 +27,9 @@
             <a href="<?= carbon_get_theme_option('yt');?>"><?= $icons->yt; ?></a>
           </div>
           <div class="btn-header-wrappeer">
-            <div class="mb-f-05 txt-c none"><a href="<?= carbon_get_theme_option('login'); ?>" class="fc-dark fd-n fs-xs">Вход</a>  |  <a href="<?= carbon_get_theme_option('login'); ?>"
-                class="fc-dark fd-n fs-xs">Регистрация</a></div>
-            <a href="#services" class="btn btn-ok">Полезные сервисы</a>
+            <!-- <div class="mb-f-05 txt-c none"><a href="<?= carbon_get_theme_option('login'); ?>" class="fc-dark fd-n fs-xs">Вход</a>  |  <a href="<?= carbon_get_theme_option('login'); ?>"
+                class="fc-dark fd-n fs-xs">Регистрация</a></div> -->
+            <a href="<?= carbon_get_theme_option('services'); ?>" class="btn btn-ok">Полезные сервисы</a>
             <div class="txt-c none mt-10">
               <a class="fd-n fw-5" href="tel:<?= preg_replace('/[^0-9]/', '', carbon_get_theme_option('phone')); ?>"><?= carbon_get_theme_option('phone'); ?></a>
             </div>
