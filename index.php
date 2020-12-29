@@ -2,8 +2,6 @@
 /**
  * Template Name: Main
  */
-global $icons;
-
 get_header(); ?>
 <?php get_template_part( 'theme-helpers/template-parts/header' )?>
 <section class="mb-50 pt-60 bg-grdn-up">
@@ -12,164 +10,18 @@ get_header(); ?>
 
       <div class="row card-h">
 
-        <div class="col-lg-4 lim-md lim-smd mb-30">
-          <div class="card">
- 
-                <div class="card-bg" style="background-image: url('<?= get_template_directory_uri();?>/assets/img/vo-chto-investirovat.jpg');">
-                  <div class="bg-tr card-topbg">
-                  <a href="#" class="fc-light">
-                    <div class="svg-white">
-                      <p class="h3">Как выбрать во что инвестировать?</p>
+        <?php
+        $args = [
+          'post_type'=>'webinars',
+          'numberposts' => -1
+        ];
 
-                      <div class="icon-listed">
-                        <?= $icons->eye; ?>
-                        <p>Вебинар / <b>бесплатно</b></p>
-                      </div>
-                      <div class="icon-listed">
-                        <?= $icons->calend; ?>
-                        <p>c 14.01.2021</p>
-                      </div>
+        $courses = get_posts($args);
+        foreach ($courses as $course) {
+          set_query_var( 'course_id', $course->ID );
+          get_template_part( 'theme-helpers/template-parts/webinar','card' );
+        } ?>
 
-                      <div class="icon-listed">
-                        <?= $icons->time; ?>
-                        <p>3 дня по 1 часу</p>
-                      </div>
-                    
-                  <button href="#modal" class="btn-pt mt-20 mb-10">Записаться
-                    <span class="icon-angle-right"> </span>
-                  </button>                      
-                    </div>
-                  </a>
-                 </div> 
-                </div>
-
-                <div class="card-body pl-0-sm-md">
-                  <a href="">
-                    <p class="h5 mb-20">Риски и доходность финансовых инструментов</p>
-                     <ul class="list-decor list-icon-ch fs-s mb-30 fc-dark">
-                      <li>
-                        Сколько можно заработать или потерять на финансовых рынках?
-                      </li>
-                      <li>
-                        Как оценить риски, связанные с инвестированием в те или иные инструменты?
-                      </li>
-                    </ul>
-                  </a>
-                </div>
-
-          </div>
-        </div>
-
-        <div class="col-lg-4 lim-md lim-smd mb-30">
-          <div class="card">
- 
-                <div class="card-bg" style="background-image: url('<?= get_template_directory_uri();?>/assets/img/vo-chto-investirovat.jpg');">          
-                  <div class="bg-tr card-topbg">
-                  <a href="#" class="fc-light">
-                    <div class="svg-white">
-                      <p class="h3">Как&nbsp;зарабатывать, а&nbsp;не&nbsp;терять?</p>
-
-                      <div class="icon-listed">
-                        <?= $icons->eye; ?>
-                        <p>Онлайн-практикум</p>
-                      </div>
-                      <div class="icon-listed">
-                        <?= $icons->calend; ?>
-                        <p>c 18.01.2021</p>
-                      </div>
-
-                      <div class="icon-listed">
-                        <?= $icons->time; ?>
-                        <p>10 дней теория и практики</p>
-                      </div>
-                    
-                  <button href="#modal" class="btn-pt mt-20 mb-10">Записаться
-                    <span class="icon-angle-right"> </span>
-                  </button>                      
-                    
-                    </div>
-                  </a>
-                 </div> 
-                </div>
-
-              <div class="col-md-12">
-                <div class="card-body pl-0-sm-md">
-                  <a href="">
-                    <p class="h5 mb-20">Принципы систематического инвестирования</p>
-
-                    <ul class="list-decor list-icon-ch fs-s mb-30 fc-dark">
-                      <li>
-                        Как перестать инвестировать наобум?
-                      </li>
-                      <li>
-                        Как получить оптимальную доходность и&nbsp;избежать рисков, к&nbsp;которым вы&nbsp;не&nbsp;готовы?
-                      </li>
-                      <li>
-                        По окончанию программы вы&nbsp;сформируете индивидуальную систему инвестирования на&nbsp;основе четких
-                        критериев и&nbsp;инструментов.
-                      </li>
-                    </ul>
-                  </a>
-               </div>
-           </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 lim-md lim-smd mb-30">
-          <div class="card">
-
-                <div class="card-bg" style="background-image: url('<?= get_template_directory_uri();?>/assets/img/vo-chto-investirovat.jpg');">
-                  <div class="bg-tr card-topbg">
-                  <a href="#" class="fc-light">
-                    <div class="svg-white">
-                      <p class="h3">Как составить свой идеальный портфель?</p>
-
-                      <div class="icon-listed">
-                        <?= $icons->eye; ?>
-                        <p>Вебинар / <b>бесплатно</b></p>
-                      </div>
-                      <div class="icon-listed">
-                        <?= $icons->calend; ?>
-                        <p>c 13.01.2021</p>
-                      </div>
-
-                      <div class="icon-listed">
-                        <?= $icons->time; ?>
-                        <p>3 дня по 1 часу</p>
-                      </div>
-                    
-                  <button href="#modal" class="btn-pt mt-20 mb-10">Записаться
-                    <span class="icon-angle-right"> </span>
-                  </button>                      
-                    
-                    </div>
-                  </a>
-                 </div> 
-                </div>
-
-                <div class="card-body pl-0-sm-md">
-                  <a href="">
-                    <p class="h5 mt-20 mb-20">Принципы формирования индивидуального портфеля</p>
-
-                    <ul class="list-decor list-icon-ch fs-s mb-30 fc-dark">
-                      <li>
-                        Что нужно учесть при&nbsp;составлении персонального финансового портфеля.
-                      </li>
-                      <li>
-                        Основы целевого инвестирования.
-                      </li>
-                      <li>
-                        Как сопоставить ожидаемую доходность и&nbsp;реальные риски?
-                      </li>
-                      <li>
-                        Как оптимизировать расходы на&nbsp;инвестиции?
-                      </li>
-                    </ul>
-                  </a>
-                </div>
-
-          </div>
-        </div>
       </div>
 
     </div>
