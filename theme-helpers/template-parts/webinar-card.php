@@ -8,7 +8,7 @@ global $icons;
 
     <div class="card-bg" style="background-image: url(<?= wp_get_attachment_image_url(carbon_get_post_meta($course_id, 'bg'), 'full') ?>);">
       <div class="bg-tr card-topbg">
-        <a href="#" class="fc-light">
+        <a href="<?= carbon_get_post_meta($course_id, 'link'); ?>" class="fc-light">
           <div class="svg-white">
             <p class="h3"><?= carbon_get_post_meta($course_id, 'headline'); ?></p>
 
@@ -35,7 +35,7 @@ global $icons;
     </div>
 
     <div class="card-body pl-0-sm-md">
-      <a href="">
+      <a href="<?= carbon_get_post_meta($course_id, 'link'); ?>">
         <p class="h5 mb-20"><?= get_the_title($course_id); ?></p>
         <div class="list-decor list-icon-ch fs-s mb-30 fc-dark">
           <?= get_post_field('post_content', $course_id); ?>

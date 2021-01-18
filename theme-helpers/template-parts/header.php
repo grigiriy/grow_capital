@@ -15,11 +15,14 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class=" mb-30 brdl pd-20">
-                  <form class="form-goriz">
+                  <!-- <form class="form-goriz">
                     <input class="wdth-66" name="name" type="text" placeholder="E-mail" aria-label="Имя">
                     <button type="submit" class="btn">Получить
                     </button>
-                  </form>
+                  </form> -->
+                  <div>
+                    <script id="c6925911ea1ea3e2a0f4b23e78e22bc6eeb15184" src="https://yetanotherbrilliantidea.getcourse.ru/pl/lite/widget/script?id=321737&rand=0001"></script>
+                  </div>
                 </div>
               </div>
               <div class="col-lg-6">

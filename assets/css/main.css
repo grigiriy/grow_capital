@@ -2120,7 +2120,7 @@ li.l7::before {
 }
 
 .mb-0 {
-  margin-bottom: 0;
+  margin-bottom: 0!important;
 }
 
 .mb-10 {
@@ -5721,7 +5721,8 @@ html.remodal-is-locked {
 }
 
 .ya-share2 {
-  margin-left: 10px;
+  padding-left: 10px;
+  margin-left: auto;
 }
 
 .ya-share2__list {

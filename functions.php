@@ -71,11 +71,16 @@ add_action(
 
 add_action('carbon_fields_register_fields', 'crb_register_custom_fields');
 function crb_register_custom_fields() {
-  include_once __DIR__ . '/theme-helpers/custom-fields/widgets.php';
+  include_once __DIR__ . '/theme-helpers/custom-fields/webinars.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/base.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/reviews.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/post.php';
-  include_once __DIR__ . '/theme-helpers/custom-fields/webinars.php';
+
+  include_once __DIR__ . '/theme-helpers/custom-fields/widgets/excel.php';
+  include_once __DIR__ . '/theme-helpers/custom-fields/widgets/formula.php';
+  include_once __DIR__ . '/theme-helpers/custom-fields/widgets/quote.php';
+  include_once __DIR__ . '/theme-helpers/custom-fields/widgets/subscribe.php';
+  include_once __DIR__ . '/theme-helpers/custom-fields/widgets/webinar.php';
 }
 
 add_action( 'after_setup_theme', 'crb_load', 1000);
@@ -102,3 +107,20 @@ $icons = (object) [
   'vk' => '<svg enable-background="new 0 0 24 24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentcolor" d="m19.915 13.028c-.388-.49-.277-.708 0-1.146.005-.005 3.208-4.431 3.538-5.932l.002-.001c.164-.547 0-.949-.793-.949h-2.624c-.668 0-.976.345-1.141.731 0 0-1.336 3.198-3.226 5.271-.61.599-.892.791-1.225.791-.164 0-.419-.192-.419-.739v-5.105c0-.656-.187-.949-.74-.949h-4.126c-.419 0-.668.306-.668.591 0 .622.945.765 1.043 2.515v3.797c0 .832-.151.985-.486.985-.892 0-3.057-3.211-4.34-6.886-.259-.713-.512-1.001-1.185-1.001h-2.625c-.749 0-.9.345-.9.731 0 .682.892 4.073 4.148 8.553 2.17 3.058 5.226 4.715 8.006 4.715 1.671 0 1.875-.368 1.875-1.001 0-2.922-.151-3.198.686-3.198.388 0 1.056.192 2.616 1.667 1.783 1.749 2.076 2.532 3.074 2.532h2.624c.748 0 1.127-.368.909-1.094-.499-1.527-3.871-4.668-4.023-4.878z"/></svg>',
   'tg' => '<svg enable-background="new 0 0 24 24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentcolor" d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z"/></svg>'
 ];
+
+
+
+
+function get_webinars_arr()
+{
+  $list = ['-' => ''];
+  $args = [
+    'post_type' => 'webinars',
+    'numberposts' => '-1'
+  ];
+  $all_posts = get_posts($args);
+  foreach ($all_posts as $webinar) {
+    $list[$webinar->ID] = $webinar->post_title;
+  }
+  return $list;
+};
