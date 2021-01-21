@@ -14,7 +14,7 @@ global $icons;
 
             <div class="icon-listed">
               <?= $icons->eye; ?>
-              <p><?= carbon_get_post_meta($course_id, 'type'); ?></b></p>
+              <p><?= carbon_get_post_meta($course_id, 'type'); ?></p>
             </div>
             <div class="icon-listed">
               <?= $icons->calend; ?>
