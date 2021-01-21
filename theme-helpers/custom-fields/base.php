@@ -13,6 +13,7 @@ Container::make( 'theme_options', 'Опции' )
     Field::make( 'text', 'ig', 'Instagram' ),
     Field::make( 'text', 'yt', 'Youtube' ),
     Field::make( 'text', 'tg', 'Telegram' ),
+    Field::make( 'text', 'wa', 'WhatsApp' ),
     Field::make( 'text', 'login', 'Login URL' ),
     Field::make( 'text', 'services', 'Services URL' )
 ]);

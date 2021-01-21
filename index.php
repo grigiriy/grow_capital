@@ -129,7 +129,7 @@ get_header(); ?>
 
         </div>
       </div>
-      <div class="row mb-30">
+      <div class="row">
 
         <div class="col-lg-5">
           <div class="pd-30 bg-dark fc-light">
@@ -149,48 +149,30 @@ get_header(); ?>
             <p class="h3">Систематическое инвестирование</p>
             <p class="">Систематическое инвестирование включает в себя четкие ответы на остальные важные вопросы.</p>
             <ul class="fw-5">
-              <li>Какой поставить Stop Loss / Take profit?
-              </li>
-              <li>Сколько потенциально я могу потерять/заработать на данной позиции?
-              </li>
-              <li>Имеет ли смысл использовать маржу, и если да, то в каком объеме?
-              </li>
-              <li>Как покупка/продажа данной ценной бумаги влияет на параметры моего портфеля?
-              </li>
-              <li>Изменились ли параметры риска моего финансового актива, и нужно ли увеличить/уменьшить размер
-                позиции?
-              </li>
+              <li>Какой поставить Stop Loss / Take profit?</li>
+              <li>Сколько потенциально я могу потерять/заработать на данной позиции?</li>
+              <li>Имеет ли смысл использовать маржу, и если да, то в каком объеме?</li>
+              <li>Как покупка/продажа данной ценной бумаги влияет на параметры моего портфеля?</li>
+              <li>Изменились ли параметры риска моего финансового актива, и нужно ли увеличить/уменьшить размер позиции?</li>
             </ul>
-          </div>
-          <div class=" mb-30 brdl-t brdl-b pd-30 bg-light">
-            <h5 class="mb-20">Доступ к бесплатным вебинарам</h5>
-            <!-- <form class="form-goriz">
-                <input class="wdth-66" name="name" type="text" placeholder="E-mail" aria-label="Имя">
-                <button type="submit" class="btn">Получить
-                </button>
-              </form> -->
-            <div>
-              <script id="c6925911ea1ea3e2a0f4b23e78e22bc6eeb15184" src="https://yetanotherbrilliantidea.getcourse.ru/pl/lite/widget/script?id=321737&rand=0002"></script>
-            </div>
           </div>
         </div>
 
+        <?php
+        set_query_var( "course_id", "55" );
+        get_template_part('theme-helpers/template-parts/forms/webinar','widget'); ?>
+
       </div>
     </div>
-
   </div>
 </section>
 
 <section class="mb-30">
   <div class="container-w">
     <h2 class="txt-c txt-l-9 mb-40">Отзывы участников образовательных программ</h2>
-
     <div class="row">
-
       <?php get_template_part('theme-helpers/template-parts/reviews'); ?>
-
     </div>
-
   </div>
 </section>
 
@@ -198,28 +180,20 @@ get_header(); ?>
   <div class="container-w">
     <div class="brdl pd-30 brdw-2 brdr-c brdc brdl-0-9 pd-0-9 pd-0-sm">
       <h2 class="mb-40">Образовательные материалы</h2>
-
       <div class="row">
-
         <div class="col-lg-4 mb-40">
-
           <p class="h5">
-            <a href="" class="fc-link">Статьи на сайте</a>
+            <a href="/posts/" class="fc-link">Статьи на сайте</a>
           </p>
           <p class="fs-s">Основные знания, которыми обязательно должен владеть инвестор, и то, о чем не рассказывают
             на курсах брокеров. Важно не только научиться нажимать кнопки Купить/Продать, но и понимать как устроен
             рынок, уметь оценивать риски и доходность.
           </p>
-
-
         </div>
 
-
-
         <div class="col-lg-4 mb-40">
-
           <p class="h5">
-            <a href="" class="fc-link">Образовательные программы</a>
+            <a href="/programs/" class="fc-link">Образовательные программы</a>
           </p>
           <p class="fs-s">Стартовые и продвинутые программы для тех, кто хочет зарабатывать на фондовом рынке
             долгосрочно:
@@ -228,34 +202,24 @@ get_header(); ?>
             <li>Как формировать и управлять портфелем, опираясь на конкретные цифры и правила.</li>
             <li>Готовые инструменты для расчетов.</li>
           </ul>
-
         </div>
 
-
-
-
         <div class="col-lg-4 mb-40">
-
           <p class="h5">
-            <a href="" class="fc-link">Полезные сервисы</a>
+            <a href="/services/" class="fc-link">Полезные сервисы</a>
           </p>
           <p class="fs-s">Доступны для зарегистрированных пользователей и участников образовательных программ
           </p>
-          <a class="btn-small btn-contr mb-40">Зарегистрироваться</a>
-
+          <a class="btn-small btn-contr mb-40" href="<?= carbon_get_theme_option('services'); ?>" target="_self">Зарегистрироваться</a>
         </div>
-
       </div>
-
     </div>
   </div>
 </section>
 
 <section class="mb-60">
   <div class="container-w">
-    <h2 class="txt-c txt-l-9 mb-60 mb-40-9 mb-0-sm">Начните бесплатное обучение по подписке
-    </h2>
-
+    <h2 class="txt-c txt-l-9 mb-60 mb-40-9 mb-0-sm">Начните бесплатное обучение по подписке</h2>
     <div class="mb-40-9">
       <div class="steps">
         <div class="step">
@@ -266,12 +230,10 @@ get_header(); ?>
           <p class="step_label">2</p>
           <p>Придёт письмо со списком образовательных программ.</p>
         </div>
-
         <div class="step">
           <p class="step_label">3</p>
           <p>Кликните на интересную и получайте письма с уроками по этой теме.</p>
         </div>
-
         <div class="step">
           <p class="step_label">4</p>
           <p>В последнем уроке можно будет выбрать следующий раздел для обучения.</p>
@@ -284,17 +246,9 @@ get_header(); ?>
     </div>
     <div class="lim-12">
       <div class=" mb-30 brdl pd-20 brdw-3 brdc brdl-0-9 pd-0-9 pd-0-sm bg-light bg-none-9">
-        <!-- <form class="form-goriz">
-          <input class="wdth-66" name="name" type="text" placeholder="E-mail" aria-label="Имя">
-          <button type="submit" class="btn">Начать
-          </button>
-        </form> -->
-        <div>
-          <script id="c6925911ea1ea3e2a0f4b23e78e22bc6eeb15184" src="https://yetanotherbrilliantidea.getcourse.ru/pl/lite/widget/script?id=321737&rand=0003"></script>
-        </div>
+        <?php get_template_part('theme-helpers/template-parts/forms/services', 'form'); ?>
       </div>
     </div>
-
   </div>
 </section>
 
