@@ -35,10 +35,10 @@ Block::make(__('Webinar Form'))
       </figure>
     </div>
     <p class="mb-10 fw-5"><?= get_the_title($course_id); ?></p>
-    <p class="fs-s"> <?= get_post_field('post_content', $course_id); ?></p>
-    <button href="<?= carbon_get_post_meta($course_id, 'link'); ?>" class="btn-small-pt">Посмотреть
+    <div class="fs-s"><?= get_post_field('post_content', $course_id); ?></div>
+    <a href="<?= carbon_get_post_meta($course_id, 'link'); ?>" class="btn-small-pt">Посмотреть
       <span class="icon-angle-right"> </span>
-    </button>
+    </a>
 
   </div><!-- /.brdc -->
 

@@ -17,10 +17,10 @@ get_header(); ?>
     </div>
     <div class="row mb-30">
       <div class="col-lg-3 hider-9">
-        <div class="mb-30 pr-60">
-          <div class="fw-6 mb-f-07">Оглавление</div>
+        <div class="mb-30 pr-10">
           <div class="d-flex">
             <ul class="fs-s mb-30 list-sidebar">
+              <div class="fw-6 mb-f-07">Оглавление</div>
               <?php
               set_query_var('post_id',$post->ID);
               get_template_part('theme-helpers/template-parts/contents','list');
@@ -43,9 +43,7 @@ get_header(); ?>
           </div>
         </div>
 
-        <div class="infobl">
-          <?php the_content(); ?>
-        </div>
+        <?php the_content(); ?>
         <?php get_template_part('theme-helpers/template-parts/bottom', 'widget'); ?>
       </div>
     </div>

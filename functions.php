@@ -78,9 +78,12 @@ function crb_register_custom_fields() {
 
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/excel.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/formula.php';
+  include_once __DIR__ . '/theme-helpers/custom-fields/widgets/link.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/quote.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/subscribe.php';
+  include_once __DIR__ . '/theme-helpers/custom-fields/widgets/subscribe-mail.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/webinar.php';
+  include_once __DIR__ . '/theme-helpers/custom-fields/widgets/webinar-inread.php';
 }
 
 add_action( 'after_setup_theme', 'crb_load', 1000);

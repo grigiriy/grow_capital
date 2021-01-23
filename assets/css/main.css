@@ -211,7 +211,7 @@ textarea {
   src: url(../fonts/OpenSans/open-sans-v15-cyrillic_latin-300.eot);
   src: local('Open Sans Light'), local(OpenSans-Light),
     url(../fonts/OpenSans/open-sans-v15-cyrillic_latin-300.eot?#iefix) format('embedded-opentype'),
-    url(../fonts/oOpenSans/pen-sans-v15-cyrillic_latin-300.woff2) format('woff2'),
+    url(../fonts/OpenSans/open-sans-v15-cyrillic_latin-300.woff2) format('woff2'),
     url(../fonts/OpenSans/open-sans-v15-cyrillic_latin-300.woff) format('woff'),
     url(../fonts/OpenSans/open-sans-v15-cyrillic_latin-300.ttf) format('truetype'),
     url(../fonts/OpenSans/open-sans-v15-cyrillic_latin-300.svg#OpenSans) format('svg');
@@ -410,7 +410,7 @@ blockquote {
 .btn-big-pt {
   background: linear-gradient(to top, #ffca17 0%, rgba(255, 255, 255, 0.1) 100%) #ffca17;
   display: inline-block;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
   border: 1px solid #ffca17;
   border-radius: 3px;
@@ -5732,4 +5732,45 @@ html.remodal-is-locked {
 
 .ya-share2__item:before {
   content: '';
+}
+
+.pr-0 {
+  padding-right: 0;
+}      
+.pl-0 {
+  padding-left: 0;
+}
+.wa-btn {
+  height: 64px;
+  background: #4caf50;
+  padding: 10px;
+  max-width: 357px;
+  margin: 3px;
+  text-align: left;
+}
+.wa-btn.sidebar {
+  margin: 0 5px 10px 0!important;
+}
+.wa-btn a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+.wa-btn a img {
+  padding: 2px 5px 5px;
+}
+@media(max-width: 768px){
+  .pl-0 {
+    padding-left: 12px;
+  }
+  .wa-btn {
+    max-width: 100%;
+    margin-left: 2px;
+    margin-right: 0;
+  }
+}
+.ya-share2__container_size_l .ya-share2__badge .ya-share2__icon {
+  height: 40px;
+  width: 40px;
+  background-size: 40px 40px;
 }
