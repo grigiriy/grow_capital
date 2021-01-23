@@ -15,4 +15,9 @@ Container::make( 'post_meta', 'Оглавление' )
   ])
 ]);
 
+Container::make( 'post_meta', 'Доп. сеошка.' )
+    ->set_context( 'side' )
+    ->add_fields([
+      Field::make( 'text', 'keywords', 'Ключевые слова')
+    ]);
 ?>
