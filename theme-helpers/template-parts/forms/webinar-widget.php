@@ -28,7 +28,7 @@ global $icons;
 
   <div class="row">
     <div class="col-md-8 pr-0 lim-md lim-smd">
-      <script id="3563c0962a77903244383435ad6f7816855ee0e2" src="https://edu.growcapital.ru/pl/lite/widget/script?id=327422"></script>
+    <script id="3563c0962a77903244383435ad6f7816855ee0e2" src="https://edu.growcapital.ru/pl/lite/widget/script?id=327422"></script>
     </div>
     <div class="col-md-4 pl-0 lim-md lim-smd">
       <div class="wa-btn">

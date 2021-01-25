@@ -24,7 +24,6 @@ get_header(); ?>
       } ?>
 
     </div>
-
   </div>
 </section>
 
@@ -32,9 +31,7 @@ get_header(); ?>
   <div class="container-w">
     <div class="lim-12">
       <h2 class="txt-c txt-l-sm mb-40">Организаторы обучения</h2>
-
       <div class="row card-h">
-
         <div class="col-lg-6 mb-30 lim-md lim-smd">
           <div class="card">
             <div class="row">
@@ -84,7 +81,6 @@ get_header(); ?>
                           </p>
                           <p class="fw-5 mb-10">Серийный предприниматель, частный инвестор</p>
                         </div>
-
                       </figcaption>
                     </figure>
                   </div>
@@ -101,7 +97,6 @@ get_header(); ?>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -111,7 +106,6 @@ get_header(); ?>
   <div class="container-w">
     <div class="brdl pd-30 brdw-2 brdc brdl-0-9 pd-0-9 pd-0-sm">
       <div class="row mb-30">
-
         <div class="col-lg-5">
           <div class="brdl-shot"></div>
           <p>Очень часто финансовые рынки сравнивают с казино и это справедливо для тех, кто приходит туда полный
@@ -126,7 +120,6 @@ get_header(); ?>
           <p>Систематические правила помогают оцифровывать и конкретизировать доходность и риски финансовых
             инструментов. Благодаря этим знаниям, инвестор может оптимизировать свой портфель с учетом его аппетитов
             и готовности к рискам.</p>
-
         </div>
       </div>
       <div class="row">
@@ -160,7 +153,8 @@ get_header(); ?>
 
         <?php
         set_query_var("course_id", "55");
-        get_template_part('theme-helpers/template-parts/forms/webinar', 'widget'); ?>
+        get_template_part('theme-helpers/template-parts/forms/webinar', 'widget');
+        ?>
 
       </div>
     </div>
@@ -246,8 +240,6 @@ get_header(); ?>
         </div>
       </div>
     </div>
-
-    <?php get_template_part('theme-helpers/template-parts/forms/services', 'form'); ?>
 
     <div class="lim-12">
       <div class=" mb-30 brdl pd-20 brdw-3 brdc brdl-0-9 pd-0-9 pd-0-sm bg-light bg-none-9">
