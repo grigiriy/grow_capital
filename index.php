@@ -5,7 +5,7 @@
  */
 get_header(); ?>
 <?php get_template_part('theme-helpers/template-parts/header') ?>
-<section class="mb-50 pt-60 bg-grdn-up">
+<section class="mb-50 pt-60 bg-grdn-up" id="webinars">
   <div class="container-w">
     <h2 class="txt-c txt-l-smd txt-l-sm mb-40">Ближайшие программы<br />по систематическому инвестированию</h2>
 
@@ -159,8 +159,8 @@ get_header(); ?>
         </div>
 
         <?php
-        set_query_var( "course_id", "55" );
-        get_template_part('theme-helpers/template-parts/forms/webinar','widget'); ?>
+        set_query_var("course_id", "55");
+        get_template_part('theme-helpers/template-parts/forms/webinar', 'widget'); ?>
 
       </div>
     </div>
@@ -224,16 +224,18 @@ get_header(); ?>
       <div class="steps">
         <div class="step">
           <p class="step_label">1</p>
-          <p>Чтобы начать учиться, отправьте нам электронную почту.</p>
+          <p>Чтобы начать учиться, выберите мессенджер или введите почту.</p>
         </div>
         <div class="step">
           <p class="step_label">2</p>
-          <p>Придёт письмо со списком образовательных программ.</p>
+          <p>Придёт сообщение со списком образовательных программ.</p>
         </div>
+
         <div class="step">
           <p class="step_label">3</p>
-          <p>Кликните на интересную и получайте письма с уроками по этой теме.</p>
+          <p>Кликните на интересную и получайте последовательные уроки по этой теме.</p>
         </div>
+
         <div class="step">
           <p class="step_label">4</p>
           <p>В последнем уроке можно будет выбрать следующий раздел для обучения.</p>
@@ -244,6 +246,9 @@ get_header(); ?>
         </div>
       </div>
     </div>
+
+    <?php get_template_part('theme-helpers/template-parts/forms/services', 'form'); ?>
+
     <div class="lim-12">
       <div class=" mb-30 brdl pd-20 brdw-3 brdc brdl-0-9 pd-0-9 pd-0-sm bg-light bg-none-9">
         <?php get_template_part('theme-helpers/template-parts/forms/services', 'form'); ?>
