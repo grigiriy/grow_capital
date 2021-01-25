@@ -12,7 +12,7 @@ Block::make(__('Webinar Form'))
     ])
   ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
 
-    $course_id = $fields['webinar_id'];
+  $course_id = $fields['webinar_id'];
 ?>
 
   <div class="brdc pd-30-9 bg-dark-9 fc-light-9 mb-30">

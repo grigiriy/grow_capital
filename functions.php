@@ -74,6 +74,7 @@ function crb_register_custom_fields() {
   include_once __DIR__ . '/theme-helpers/custom-fields/webinars.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/base.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/reviews.php';
+  include_once __DIR__ . '/theme-helpers/custom-fields/getcourse.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/post.php';
 
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/excel.php';
@@ -81,7 +82,6 @@ function crb_register_custom_fields() {
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/link.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/quote.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/subscribe.php';
-  include_once __DIR__ . '/theme-helpers/custom-fields/widgets/subscribe-mail.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/webinar.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/webinar-inread.php';
 }
@@ -114,8 +114,7 @@ $icons = (object) [
 
 
 
-function get_webinars_arr()
-{
+function get_webinars_arr() {
   $list = ['-' => ''];
   $args = [
     'post_type' => 'webinars',
@@ -124,6 +123,20 @@ function get_webinars_arr()
   $all_posts = get_posts($args);
   foreach ($all_posts as $webinar) {
     $list[$webinar->ID] = $webinar->post_title;
+  }
+  return $list;
+};
+
+
+function get_widgets_arr() {
+  $list = ['-' => ''];
+  $args = [
+    'post_type' => 'getcourse_widgets',
+    'numberposts' => '-1'
+  ];
+  $all_posts = get_posts($args);
+  foreach ($all_posts as $widget) {
+    $list[$widget->ID] = $widget->post_title;
   }
   return $list;
 };

@@ -62,5 +62,33 @@ function true_register_post_type_init()
         )
       ];
     register_post_type ( 'reviews', $args );
+
+    $labels = [
+        'name' => 'Виджет Геткурс',
+        'singular_name' => 'Виджет Геткурс',
+        'add_new' => 'Добавить виджет',
+        'add_new_item' => 'Добавить новый виджет',
+        'edit_item' => 'Редактировать виджет',
+        'new_item' => 'Новый виджет',
+        'all_items' => 'Все виджеты',
+        'view_item' => 'Просмотр виджетов на сайте',
+        'search_items' => 'Искать втджеты',
+        'not_found' => 'Виджетов не найдено.',
+        'not_found_in_trash' => 'В корзине нет виджетов.',
+        'menu_name' => 'Виджеты Геткурс'
+    ];
+
+    $args = [
+        'labels' => $labels,
+        'public' => true,
+        'show_ui' => true,
+        'menu_position' => 20,
+        'has_archive' => false,
+        'menu_icon' => 'dashicons-media-code',
+        'supports' => array(
+            'title'
+        )
+      ];
+    register_post_type ( 'getcourse_widgets', $args );
 } //function close    
 ?>
