@@ -1217,6 +1217,7 @@ ul.fc-light li a {
 
 .infobl .formula {
   width: auto;
+  max-width: 100%;
   text-align: center;
 }
 
@@ -5774,3 +5775,9 @@ html.remodal-is-locked {
   width: 40px;
   background-size: 40px 40px;
 }
+.infobl td {
+  border: solid 1px #333;
+  padding: 10px;
+  font-size: 0.6em;
+}
+
