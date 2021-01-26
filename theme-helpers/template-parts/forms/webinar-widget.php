@@ -3,7 +3,7 @@ global $icons;
 ?>
 
 <div class="col-12 mb-30 mt-50 txt-c txt-l-sm">
-  <h3 class="mb-20  mb-30">Записаться на бесплатный вебинар<br />«<?= get_the_title($course_id); ?>»</h3>
+  <h3 class="mb-20  mb-30">Записаться на бесплатный вебинар<br />«<<?= carbon_get_post_meta($course_id, 'headline'); ?>»</h3>
 
   <ul class="list-inline">
     <li>

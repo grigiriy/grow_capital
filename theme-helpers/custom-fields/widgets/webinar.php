@@ -29,13 +29,12 @@ Block::make(__('Webinar Form'))
             <div class="icon-listed">
               <p><?= carbon_get_post_meta($course_id, 'type'); ?></p>
             </div>
-
           </div>
         </figcaption>
       </figure>
     </div>
-    <p class="mb-10 fw-5"><?= get_the_title($course_id); ?></p>
-    <div class="fs-s"><?= get_post_field('post_content', $course_id); ?></div>
+    <p class="mb-10 fw-5"><?= carbon_get_post_meta($course_id, 'subtitle'); ?></p>
+    <div class="fs-s"><?= carbon_get_post_meta($course_id, 'lead'); ?></div>
     <a href="<?= carbon_get_post_meta($course_id, 'link'); ?>" class="btn-small-pt">Посмотреть
       <span class="icon-angle-right"> </span>
     </a>

@@ -11,6 +11,8 @@ Container::make( 'post_meta', 'Settings' )
     Field::make('text', 'type', 'Тип'),
     Field::make('text', 'date', 'Дата'),
     Field::make('text', 'period', 'Длительность'),
+    Field::make('text', 'subtitle', 'Подзаголовок'),
+    Field::make('rich text', 'lead', 'Описание на карточке'),
 ]);
 
 ?>

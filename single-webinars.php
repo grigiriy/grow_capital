@@ -2,7 +2,7 @@
 
 /**
  * Template Name: Webinar
- * Template Post Type: eebinars
+ * Template Post Type: webinars
  */
 global $icons;
 

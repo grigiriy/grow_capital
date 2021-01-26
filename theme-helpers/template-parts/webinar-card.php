@@ -36,9 +36,9 @@ global $icons;
 
     <div class="card-body pl-0-sm-md">
       <a href="<?= carbon_get_post_meta($course_id, 'link'); ?>">
-        <p class="h5 mb-20"><?= get_the_title($course_id); ?></p>
+        <p class="h5 mb-20"><?= carbon_get_post_meta($course_id, 'subtitle'); ?></p>
         <div class="list-decor list-icon-ch fs-s mb-30 fc-dark">
-          <?= get_post_field('post_content', $course_id); ?>
+          <?= carbon_get_post_meta($course_id, 'lead'); ?>
         </div>
       </a>
     </div>

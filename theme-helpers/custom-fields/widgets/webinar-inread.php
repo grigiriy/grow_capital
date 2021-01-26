@@ -24,7 +24,7 @@ Block::make(__('Webinar InRead'))
       <div class="bg-tr card-topbg">
         <a href="<?= $fields['is_gc'] ? carbon_get_post_meta($course_id, 'link') : get_the_permalink($course_id); ?>" class="fc-light">
           <div class="svg-white">
-            <p class="h3"><?= get_the_title($course_id); ?></p>
+            <p class="h3"><?= carbon_get_post_meta($course_id, 'headline'); ?></p>
 
             <div class="icon-listed">
               <?= $icons->eye; ?>

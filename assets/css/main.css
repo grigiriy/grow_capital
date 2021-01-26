@@ -5760,6 +5760,27 @@ html.remodal-is-locked {
 .wa-btn a img {
   padding: 2px 5px 5px;
 }
+.ya-share2__container_size_l .ya-share2__badge .ya-share2__icon {
+  height: 40px!important;
+  width: 40px!important;
+  background-size: 40px 40px!important;
+}
+.ya-share2__list.ya-share2__list_direction_horizontal > .ya-share2__item {
+  margin: 0 4px 8px 0!important;
+}
+.ya-share2 {
+  width: 40px!important;
+}
+.infobl td {
+  border: solid 1px #333;
+  padding: 10px;
+  font-size: 0.6em;
+}
+@media(min-width: 769px){
+  .ya-share2__container {
+    position: fixed!important;
+  }
+}
 @media(max-width: 768px){
   .pl-0 {
     padding-left: 12px;
@@ -5770,14 +5791,3 @@ html.remodal-is-locked {
     margin-right: 0;
   }
 }
-.ya-share2__container_size_l .ya-share2__badge .ya-share2__icon {
-  height: 40px;
-  width: 40px;
-  background-size: 40px 40px;
-}
-.infobl td {
-  border: solid 1px #333;
-  padding: 10px;
-  font-size: 0.6em;
-}
-
