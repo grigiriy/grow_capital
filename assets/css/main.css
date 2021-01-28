@@ -5717,8 +5717,9 @@ html.remodal-is-locked {
 }
 
 .social-wrapper svg {
-  height: 20px;
-  width: 20px;
+  height: 22px;
+  width: 22px;
+  margin-bottom: 3px;
 }
 
 .ya-share2 {

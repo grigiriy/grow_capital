@@ -84,7 +84,9 @@
       </form>
     </div> -->
 
-    <?php get_template_part( 'theme-helpers/template-parts/auth','modal' ); ?>
+    <?php
+    // get_template_part( 'theme-helpers/template-parts/auth','modal' );
+    ?>
 
   </footer>
 <?php wp_footer() ?>

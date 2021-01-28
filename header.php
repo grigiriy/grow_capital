@@ -30,12 +30,19 @@
             <a href="/"><img src="<?= get_template_directory_uri(); ?>/assets/img/logo-small.png" class="logo-small" alt="" /></a>
           </div>
           <div class="ml-auto px-40 mg-auto-9 social-wrapper">
-            <?php global $icons; ?>
-            <a href="<?= carbon_get_theme_option('vk'); ?>"><?= $icons->vk; ?></a>
-            <a href="<?= carbon_get_theme_option('fb'); ?>"><?= $icons->fb; ?></a>
-            <a href="<?= carbon_get_theme_option('ig'); ?>"><?= $icons->ig; ?></a>
-            <a href="<?= carbon_get_theme_option('tg'); ?>"><?= $icons->tg; ?></a>
-            <a href="<?= carbon_get_theme_option('yt'); ?>"><?= $icons->yt; ?></a>
+            <?php global $icons;
+            
+            $soc_arr = ['vk','fb','ig','tg','yt'];
+
+            foreach($soc_arr as $soc) {
+              if(carbon_get_theme_option($soc)){
+            ?>
+              <a href="<?= carbon_get_theme_option($soc); ?>" target="_blank"><?= $icons->$soc; ?></a>
+            <?php
+              }
+            }
+            ?>
+            
           </div>
           <div class="btn-header-wrappeer">
             <!-- <div class="mb-f-05 txt-c none"><a href="<?= carbon_get_theme_option('login'); ?>" class="fc-dark fd-n fs-xs">Вход</a>  |  <a href="<?= carbon_get_theme_option('login'); ?>"
