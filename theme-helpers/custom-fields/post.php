@@ -17,7 +17,7 @@ Container::make( 'post_meta', 'Оглавление' )
 ]);
 
 Container::make( 'post_meta', 'Доп. сеошка.' )
-  ->where( 'post_type', 'IN', ['page','post'] )
+  ->where( 'post_type', 'IN', ['page','post','webinars'] )
   ->set_context( 'side' )
   ->add_fields([
     Field::make( 'text', 'keywords', 'Ключевые слова')
