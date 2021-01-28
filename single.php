@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Template Name: Single
  */
@@ -11,7 +10,6 @@ get_header(); ?>
   <div class="container-w">
     <div class="row mb-20 pt-40">
       <div class="col-xl-offset-3 col-xl-9 fs-xs fw-3">
-        <!-- <a href="">Знания и аналитика</a> <span class="fc-contr">/</span> Расчет доходности портфеля -->
         <?php get_template_part('theme-helpers/template-parts/breadcrumbs'); ?>
       </div>
     </div>
@@ -44,7 +42,6 @@ get_header(); ?>
         </div>
 
         <?php the_content(); ?>
-        <?php get_template_part('theme-helpers/template-parts/bottom', 'widget'); ?>
       </div>
     </div>
   </div>

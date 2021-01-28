@@ -77,6 +77,7 @@ function crb_register_custom_fields() {
   include_once __DIR__ . '/theme-helpers/custom-fields/getcourse.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/post.php';
 
+  include_once __DIR__ . '/theme-helpers/custom-fields/widgets/bottom-widget.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/excel.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/formula.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/link.php';
@@ -112,7 +113,18 @@ $icons = (object) [
 ];
 
 
-
+function get_all_arr() {
+  $list = ['-' => ''];
+  $args = [
+    'post_type' => ['webinars','post'],
+    'numberposts' => '-1'
+  ];
+  $all_posts = get_posts($args);
+  foreach ($all_posts as $el) {
+    $list[$el->ID] = $el->post_type .' - '.$el->post_title;
+  }
+  return $list;
+};
 
 function get_webinars_arr() {
   $list = ['-' => ''];
