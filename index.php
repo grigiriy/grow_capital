@@ -242,8 +242,20 @@ get_header(); ?>
     </div>
 
     <div class="lim-12">
-      <div class=" mb-30 brdl pd-20 brdw-3 brdc brdl-0-9 pd-0-9 pd-0-sm bg-light bg-none-9">
+      <div class="mb-30 brdl pd-20 brdw-3 brdc brdl-0-9 pd-0-9 pd-0-sm bg-light bg-none-9">
         <?php get_template_part('theme-helpers/template-parts/forms/services', 'form'); ?>
+        <div class="row">
+          <div class="col-md-8 pr-0 lim-md lim-smd">
+          <script id="e52e8e989fd7cb49a5a6fdb2148f3071281799d4" src="https://edu.growcapital.ru/pl/lite/widget/script?id=327501&rand1234"></script>
+          </div>
+          <div class="col-md-4 pl-0 lim-md lim-smd">
+            <div class="wa-btn">
+              <a href="https://wa.me/<?= preg_replace('/[^0-9]/', '', carbon_get_theme_option('wa')); ?>" target="_blank">
+                <img src="<?= get_template_directory_uri(); ?>/assets/img/whatsapp.png" class="icon-50" alt=""> Получить в WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

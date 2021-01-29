@@ -30,7 +30,7 @@
 
           <div class="row">
             <div class="col-md-8 pr-0 lim-md lim-smd">
-            <script id="e52e8e989fd7cb49a5a6fdb2148f3071281799d4" src="https://edu.growcapital.ru/pl/lite/widget/script?id=327501"></script>
+            <script id="e52e8e989fd7cb49a5a6fdb2148f3071281799d4" src="https://edu.growcapital.ru/pl/lite/widget/script?id=327501&rand123"></script>
             </div>
             <div class="col-md-4 pl-0 lim-md lim-smd">
               <div class="wa-btn">
