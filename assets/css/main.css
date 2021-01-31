@@ -1313,6 +1313,7 @@ a.fc-dark:hover{
 }
 .icon-listed img,
 .icon-listed svg {
+  max-height: 20px;
   max-width: 20px;
   min-width: 20px;
   margin-right: 10px;
