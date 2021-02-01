@@ -19,6 +19,7 @@
                   <?php get_template_part('theme-helpers/template-parts/forms/services', 'form'); ?>
                 </div>
               </div>
+              <?php get_template_part('theme-helpers/template-parts/forms/services', 'buttons'); ?>
             </div>
             <div class="col-lg-6">
               <p class="fs-l fw-5">Выберите месенджер или оставьте e-mail и мы пришлем вам доступ ко всем бесплатным сервисам и образовательным программам.
@@ -28,18 +29,20 @@
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-md-8 pr-0 lim-md lim-smd">
-            <script id="e52e8e989fd7cb49a5a6fdb2148f3071281799d4" src="https://edu.growcapital.ru/pl/lite/widget/script?id=327501&rand123"></script>
-            </div>
-            <div class="col-md-4 pl-0 lim-md lim-smd">
-              <div class="wa-btn">
-                <a href="https://wa.me/<?= preg_replace('/[^0-9]/', '', carbon_get_theme_option('wa')); ?>" target="_blank">
-                  <img src="<?= get_template_directory_uri(); ?>/assets/img/whatsapp.png" class="icon-50" alt=""> Получить в WhatsApp
-                </a>
+          <?php if (1 > 2) { ?>
+            <div class="row">
+              <div class="col-md-8 pr-0 lim-md lim-smd">
+                <script id="e52e8e989fd7cb49a5a6fdb2148f3071281799d4" src="https://edu.growcapital.ru/pl/lite/widget/script?id=327501&rand123"></script>
+              </div>
+              <div class="col-md-4 pl-0 lim-md lim-smd">
+                <div class="wa-btn">
+                  <a href="https://wa.me/<?= preg_replace('/[^0-9]/', '', carbon_get_theme_option('wa')); ?>" target="_blank">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/img/whatsapp.png" class="icon-50" alt=""> Получить в WhatsApp
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
+          <?php } ?>
 
         </div>
       </div>
