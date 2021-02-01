@@ -51,7 +51,7 @@
                 class="fc-dark fd-n fs-xs">Регистрация</a></div> -->
             <a href="<?= carbon_get_theme_option('services'); ?>" class="btn btn-ok">Полезные сервисы</a>
             <div class="txt-c none mt-10">
-              <a class="fd-n fw-5" href="tel:<?= preg_replace('/[^0-9]/', '', carbon_get_theme_option('phone')); ?>"><?= carbon_get_theme_option('phone'); ?></a>
+              <a class="fd-n fw-5" href="tel:<?= preg_replace('/[^0-9]/', '', str_replace('+7', '8',carbon_get_theme_option('phone'))); ?>"><?= carbon_get_theme_option('phone'); ?></a>
             </div>
           </div>
 
