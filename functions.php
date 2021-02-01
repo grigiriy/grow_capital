@@ -50,6 +50,7 @@ function theme_scripts()
 {
   wp_enqueue_script('remodal', get_template_directory_uri() . '/assets/js/remodal.js',['jquery'], STATIC_FILES_BUILD_VERSION, true);
   wp_enqueue_script('master-script', get_template_directory_uri() . '/assets/js/main.js',['remodal'], STATIC_FILES_BUILD_VERSION, true);
+  wp_enqueue_script('integrat-script', get_template_directory_uri() . '/assets/js/integration.js',['master-script'], STATIC_FILES_BUILD_VERSION, true);
 }
 add_action('wp_print_styles', 'theme_styles');
 add_action('wp_print_styles', 'theme_scripts');
