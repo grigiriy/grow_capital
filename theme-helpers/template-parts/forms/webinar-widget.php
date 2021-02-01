@@ -3,7 +3,7 @@ global $icons;
 ?>
 
 <div class="col-12 mb-30 mt-50 txt-c txt-l-sm">
-  <h3 class="mb-20  mb-30">Записаться на бесплатный вебинар<br />«<<?= carbon_get_post_meta($course_id, 'headline'); ?>»</h3>
+  <h3 class="mb-20  mb-30">Записаться на бесплатный вебинар<br />«<?= carbon_get_post_meta($course_id, 'headline'); ?>»</h3>
 
   <ul class="list-inline">
     <li>
@@ -26,9 +26,10 @@ global $icons;
     </li>
   </ul>
 
+  <?php if(1>2){ ?>
   <div class="row">
     <div class="col-md-8 pr-0 lim-md lim-smd">
-    <script id="3563c0962a77903244383435ad6f7816855ee0e2" src="https://edu.growcapital.ru/pl/lite/widget/script?id=327422"></script>
+      <script id="3563c0962a77903244383435ad6f7816855ee0e2" src="https://edu.growcapital.ru/pl/lite/widget/script?id=327422"></script>
     </div>
     <div class="col-md-4 pl-0 lim-md lim-smd">
       <div class="wa-btn">
@@ -38,38 +39,13 @@ global $icons;
     </div>
     </div>
   </div>
-
-
-
-  <?php if( 1 > 2) { ?>
-
-  <!-- OLD! -->
-
-  <div class="row mb-30">
-    <div class="col-sm-3 txt-c">
-      <a href="<?= carbon_get_post_meta($course_id, 'link'); ?>" target="_blank">
-        <img src="<?= get_template_directory_uri(); ?>/assets/img/telegram.png" class="mb-20 icon-75" alt="">
-        <p class="fs-s fw-6">Записаться через Телеграмм</p>
-      </a>
+  <?php } else { ?>
+    <div class="col-sm-8 mx-auto"> 
+    <?php
+    set_query_var( 'is_webinar', true );
+    get_template_part('theme-helpers/template-parts/forms/services', 'buttons');
+    set_query_var( 'is_webinar', false );
+    ?>
     </div>
-    <div class="col-sm-3 txt-c">
-      <a href="https://wa.me/<?= preg_replace('/[^0-9]/', '', carbon_get_theme_option('wa')); ?>" target="_blank">
-        <img src="<?= get_template_directory_uri(); ?>/assets/img/whatsapp.png" class="mb-20 icon-75" alt="">
-        <p class="fs-s fw-6">Записаться через WhatsApp</p>
-      </a>
-    </div>
-    <div class="col-sm-3 txt-c">
-      <a href="<?= carbon_get_post_meta($course_id, 'link'); ?>" target="_blank">
-        <img src="<?= get_template_directory_uri(); ?>/assets/img/vk.png" class="mb-20 icon-75" alt="">
-        <p class="fs-s fw-6">Записаться через ВК</p>
-      </a>
-    </div>
-    <div class="col-sm-3 txt-c">
-      <a href="<?= carbon_get_post_meta($course_id, 'link'); ?>" target="_blank">
-        <img src="<?= get_template_directory_uri(); ?>/assets/img/mail.png" class="mb-20 icon-75" alt="">
-        <p class="fs-s fw-6">Записаться через почту</p>
-      </a>
-    </div>
-  </div>
-<?php } ?>
+  <?php } ?>
 </div>

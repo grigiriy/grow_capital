@@ -918,6 +918,14 @@ ol.decor-ol-2 li:before {
   content: '';
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
 mark,
 .mark {
   border-radius: 3px;
@@ -966,7 +974,7 @@ ul.fc-light li a {
 .fc-dark {
   color: #000;
 }
-a.fc-dark:hover{
+a.fc-dark:hover {
   color: #000;
 }
 .fc-07 {
@@ -1240,7 +1248,10 @@ a.fc-dark:hover{
   font-family: 'Montserrat', 'Segoe UI', Open sans, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
     Arial, sans-serif;
 }
-.infobl p {
+.infobl p:not(class^='ml-'),
+.infobl p:not(class^='mr-'),
+.infobl p:not(class^='mb-'),
+.infobl p:not(class^='mt-') {
   margin: 0 0 1.2em;
 }
 
@@ -1269,6 +1280,7 @@ a.fc-dark:hover{
 .infobl blockquote {
   font-weight: 500;
 }
+
 .infobl .blockquote p,
 .infobl blockquote p,
 .infobl .blockquote ul,
@@ -1282,7 +1294,12 @@ a.fc-dark:hover{
 .infobl blockquote ul li {
   margin: 0 0 0.9em 1.8em;
 }
-
+.infobl blockquote + blockquote,
+.infobl .blockquote + .blockquote {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: -0.5em;
+}
 .callout {
   font-weight: 600;
   font-style: italic;
@@ -1552,6 +1569,8 @@ a.fc-dark:hover{
   max-width: 55px;
   width: 100%;
   height: 100%;
+  object-fit: contain;
+  object-position: top;
 }
 
 .facecrd-55 figure figcaption {
@@ -2125,7 +2144,7 @@ li.l7::before {
 }
 
 .mb-0 {
-  margin-bottom: 0!important;
+  margin-bottom: 0 !important;
 }
 
 .mb-10 {
@@ -2506,6 +2525,9 @@ li.l7::before {
   flex-wrap: wrap;
   margin-right: -0.875rem;
   margin-left: -0.875rem;
+}
+.mx-auto {
+  margin: 0 auto;
 }
 
 .col-1,
@@ -5742,7 +5764,7 @@ html.remodal-is-locked {
 
 .pr-0 {
   padding-right: 0;
-}      
+}
 .pl-0 {
   padding-left: 0;
 }
@@ -5755,7 +5777,7 @@ html.remodal-is-locked {
   text-align: left;
 }
 .wa-btn.sidebar {
-  margin: 15px 5px 10px 0!important;
+  margin: 15px 5px 10px 0 !important;
 }
 .wa-btn a {
   color: #fff;
@@ -5766,27 +5788,27 @@ html.remodal-is-locked {
   padding: 2px 5px 5px;
 }
 .ya-share2__container_size_l .ya-share2__badge .ya-share2__icon {
-  height: 40px!important;
-  width: 40px!important;
-  background-size: 40px 40px!important;
+  height: 40px !important;
+  width: 40px !important;
+  background-size: 40px 40px !important;
 }
 .ya-share2__list.ya-share2__list_direction_horizontal > .ya-share2__item {
-  margin: 0 4px 8px 0!important;
+  margin: 0 4px 8px 0 !important;
 }
 .ya-share2 {
-  width: 40px!important;
+  width: 40px !important;
 }
 .infobl td {
   border: solid 1px #333;
   padding: 10px;
   font-size: 0.6em;
 }
-@media(min-width: 769px){
+@media (min-width: 769px) {
   .ya-share2__container {
-    position: fixed!important;
+    position: fixed !important;
   }
 }
-@media(max-width: 768px){
+@media (max-width: 768px) {
   .pl-0 {
     padding-left: 12px;
   }
@@ -5795,4 +5817,11 @@ html.remodal-is-locked {
     margin-left: 2px;
     margin-right: 0;
   }
+}
+
+a.vk,
+a.tg,
+a.wa {
+  color: #191919;
+  text-decoration: none;
 }

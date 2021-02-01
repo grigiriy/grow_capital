@@ -4,7 +4,7 @@ global $icons;
 
 <div class="col-lg-4 lim-md lim-smd mb-30">
 
-  <div class="card">
+  <div class="card js_click">
 
     <div class="card-bg" style="background-image: url(<?= wp_get_attachment_image_url(carbon_get_post_meta($course_id, 'bg'), 'full') ?>);">
       <div class="bg-tr card-topbg">
