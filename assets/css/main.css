@@ -1548,6 +1548,7 @@ a.fc-dark:hover {
 .facecrd-75 figure img {
   max-width: 75px;
   width: 100%;
+  height: auto;
 }
 
 .facecrd-75 figure figcaption {
