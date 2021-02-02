@@ -35,7 +35,7 @@ Block::make(__('Bottom Widget'))
 ?>
 
 
-<div class="row">
+<div class="row bottom-widget">
   <div class="col-lg-12 infobl mb-30">
     <h2><?= esc_html($fields['headline']); ?></h2>
     <p><?= $fields['content']; ?></p>

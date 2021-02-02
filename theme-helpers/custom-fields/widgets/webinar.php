@@ -16,7 +16,7 @@ Block::make(__('Webinar Form'))
   $course_id = $fields['webinar_id'];
 ?>
 
-  <div class="brdc pd-30-9 bg-dark-9 fc-light-9 mb-30">
+  <div class="brdc pd-30-9 bg-dark-9 fc-light-9 mb-30 sidebar-widget">
     <div class="brdl-shot">
     </div>
     <div class="facecrd-55">

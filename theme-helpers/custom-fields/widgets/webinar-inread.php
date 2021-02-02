@@ -18,7 +18,7 @@ Block::make(__('Webinar InRead'))
     global $icons;
 ?>
 
-  <div class="card mb-30">
+  <div class="card mb-30 inread-widget">
     <div class="card-bg" style="background-image: url(<?= wp_get_attachment_image_url(carbon_get_post_meta($course_id, 'bg'), 'full'); ?>);">
       <div class="bg-tr card-topbg">
         <a href="<?= !empty($fields['is_gc']) ? carbon_get_post_meta($course_id, 'link') : get_the_permalink($course_id); ?>" class="fc-light">
