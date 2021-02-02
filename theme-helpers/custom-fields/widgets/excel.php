@@ -16,7 +16,7 @@ Block::make(__('Excel Form'))
   ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
 ?>
 
-  <div class="brdc pd-30-9 bg-dark-9 fc-light-9 mb-30 sidebar-widget">
+  <div class="brdc pd-30-9 bg-dark-9 fc-light-9 mb-30 sidebar-download-widget">
     <div class="brdl-shot"></div>
     <div class="facecrd-55">
       <figure class="mb-0">

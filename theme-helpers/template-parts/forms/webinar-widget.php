@@ -2,7 +2,7 @@
 global $icons;
 ?>
 
-<div class="col-12 mb-30 mt-50 txt-c txt-l-sm">
+<div class="col-12 mb-30 mt-50 txt-c txt-l-sm index-webinar-widget">
   <h3 class="mb-20  mb-30">Записаться на бесплатный вебинар<br />«<?= carbon_get_post_meta($course_id, 'headline'); ?>»</h3>
 
   <ul class="list-inline">

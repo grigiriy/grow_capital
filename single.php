@@ -14,7 +14,7 @@ get_header(); ?>
       </div>
     </div>
     <div class="row mb-30">
-      <div class="col-lg-3 hider-9">
+      <div class="col-lg-3 hider-9 left-sidebar">
         <div class="mb-30 pr-10">
           <div class="d-flex">
             <ul class="fs-s mb-30 list-sidebar">

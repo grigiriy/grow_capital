@@ -172,7 +172,7 @@ get_header(); ?>
 
 <section class="mb-60">
   <div class="container-w">
-    <div class="brdl pd-30 brdw-2 brdr-c brdc brdl-0-9 pd-0-9 pd-0-sm">
+    <div class="brdl pd-30 brdw-2 brdr-c brdc brdl-0-9 pd-0-9 pd-0-sm materials-widget">
       <h2 class="mb-40">Образовательные материалы</h2>
       <div class="row">
         <div class="col-lg-4 mb-40">
@@ -241,7 +241,7 @@ get_header(); ?>
       </div>
     </div>
 
-    <div class="lim-12">
+    <div class="lim-12 index-bottom-widget">
       <?php
       set_query_var( 'is_webinar', true );
       get_template_part('theme-helpers/template-parts/forms/services', 'buttons');
