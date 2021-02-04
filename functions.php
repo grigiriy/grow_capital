@@ -78,6 +78,14 @@ function crb_register_custom_fields() {
   include_once __DIR__ . '/theme-helpers/custom-fields/getcourse.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/post.php';
 
+  include_once __DIR__ . '/theme-helpers/custom-fields/webinar-elements/about-widget.php';
+  include_once __DIR__ . '/theme-helpers/custom-fields/webinar-elements/bonus-widget.php';
+  include_once __DIR__ . '/theme-helpers/custom-fields/webinar-elements/header-widget.php';
+  include_once __DIR__ . '/theme-helpers/custom-fields/webinar-elements/landing-widget.php';
+  include_once __DIR__ . '/theme-helpers/custom-fields/webinar-elements/programm-widget.php';
+  include_once __DIR__ . '/theme-helpers/custom-fields/webinar-elements/reviews-widget.php';
+  include_once __DIR__ . '/theme-helpers/custom-fields/webinar-elements/teachers-widget.php';
+
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/custom.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/bottom-widget.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/excel.php';
