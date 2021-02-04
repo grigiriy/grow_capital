@@ -7,7 +7,9 @@ Block::make(__('Webinar Header Widget'))
   ->add_fields([
     Field::make('html', 'crb_information_webinar')
       ->set_html('<h2 style="color:blue; padding: 20px;">Хедер</h2>'),
-    Field::make('image', 'bg', 'Фоновая картинка')
+    Field::make('image', 'bg', 'Фоновая картинка'),
+    Field::make('text', 'subtitle', 'Подзаг'),
+    Field::make('rich_text', 'text_content', 'Текст')
   ])
   ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
 
@@ -21,7 +23,7 @@ Block::make(__('Webinar Header Widget'))
         <div class="pt-60 pb-60 pb-f-05-sm fc-light">
           <div class="row">
             <div class="col-lg-5">
-              <div class="h1 mb-20"><span class="fs-l">Как выбрать, во&nbsp;что инвестировать?</span></div>
+              <div class="h1 mb-20"><span class="fs-l"><?= get_the_title(); ?></span></div>
 
               <form class="form-goriz mb-20" id="ltForm9184268" action="https://edu.growcapital.ru/pl/lite/block-public/process-html?id=969696534" method="post" data-open-new-window="0">
                 <input type="hidden" name="formParams[setted_offer_id]">
@@ -35,6 +37,7 @@ Block::make(__('Webinar Header Widget'))
                 <input type="hidden" name="requestSimpleSign" value="0a64beb725ee07790190b8a66ea25c36">
                 <input type="hidden" name="isHtmlWidget" value="1" />
               </form>
+
               <span id="gccounterImgContainer"></span>
               <script>
                 window.addEventListener('load', function() {
@@ -56,14 +59,10 @@ Block::make(__('Webinar Header Widget'))
               </div>
             </div>
             <div class="col-lg-7">
-              <h1 class="mb-20">Способы оценки рисков и&nbsp;доходности финансовых инструментов</h1>
+              <h1 class="mb-20"><?= esc_html($fields['subtitle']); ?></h1>
               <p class="fs-l fw-5">
-                Узнайте о&nbsp;систематических правилах, которые делают управление портфелем ценных бумаг более
-                эффективным
-                и&nbsp;менее рискованным.
+              <?= esc_html($fields['text_content']); ?>
               </p>
-
-
 
               <ul class="list-inline fs-l">
                 <li>
@@ -81,7 +80,7 @@ Block::make(__('Webinar Header Widget'))
                 <li>
                   <div class="icon-listed-l">
                     <?= $icons->eye; ?>
-                    <p>3 онлайн лекции / <b>бесплатно</b></p>
+                    <?= carbon_get_post_meta($post->ID, 'type'); ?>
                   </div>
                 </li>
 
