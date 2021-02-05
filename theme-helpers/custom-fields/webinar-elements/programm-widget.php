@@ -12,7 +12,7 @@ Block::make(__('Webinar Programm Widget'))
 
     global $icons;
 ?>
-  <section class="mb-50">
+  <section class="mb-50 <?php foreach ($attributes as $attribute){ echo $attribute.' ';}?>">
     <div class="container-w">
       <div class="lim-12">
         <div class="brdl pd-30 brdw-2 brdr-c brdc brdl-0-9 pd-0-9 pd-0-sm">
