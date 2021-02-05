@@ -3,7 +3,7 @@ global $icons;
 ?>
 
 <div class="col-12 mb-30 mt-50 txt-c txt-l-sm index-webinar-widget">
-  <h3 class="mb-20  mb-30">Записаться на бесплатный вебинар<br />«<?= carbon_get_post_meta($course_id, 'headline'); ?>»</h3>
+  <h3 class="mb-20  mb-30">Записаться на абсолютно бесплатный вебинар<br />«<?= carbon_get_post_meta($course_id, 'headline'); ?>»</h3>
 
   <ul class="list-inline">
     <li>
@@ -43,7 +43,7 @@ global $icons;
     <div class="col-sm-8 mx-auto"> 
     <?php
     set_query_var( 'is_webinar', true );
-    get_template_part('theme-helpers/template-parts/forms/services', 'buttons');
+    get_template_part('theme-helpers/template-parts/forms/webinar', 'buttons');
     set_query_var( 'is_webinar', false );
     ?>
     </div>

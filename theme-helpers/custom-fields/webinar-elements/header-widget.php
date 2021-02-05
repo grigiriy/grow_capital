@@ -68,19 +68,19 @@ Block::make(__('Webinar Header Widget'))
                 <li>
                   <div class="icon-listed-l">
                     <?= $icons->calend; ?>
-                    <p>c 17.02.2021</p>
+                    <?= carbon_get_post_meta(get_the_ID(), 'date'); ?>
                   </div>
                 </li>
                 <li>
                   <div class="icon-listed-l">
                     <?= $icons->time; ?>
-                    <p>3 дня по 1 часу</p>
+                    <?= carbon_get_post_meta(get_the_ID(), 'period'); ?>
                   </div>
                 </li>
                 <li>
                   <div class="icon-listed-l">
                     <?= $icons->eye; ?>
-                    <?= carbon_get_post_meta($post->ID, 'type'); ?>
+                    <?= carbon_get_post_meta(get_the_ID(), 'type'); ?>
                   </div>
                 </li>
 

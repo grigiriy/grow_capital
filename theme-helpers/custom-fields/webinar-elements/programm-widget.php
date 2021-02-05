@@ -180,19 +180,19 @@ Block::make(__('Webinar Programm Widget'))
               <li>
                 <div class="icon-listed-l">
                   <?= $icons->calend; ?>
-                  <p>c 14.01.2021</p>
+                  <?= carbon_get_post_meta(get_the_ID(), 'date'); ?>
                 </div>
               </li>
               <li>
                 <div class="icon-listed-l">
                   <?= $icons->time; ?>
-                  <p>3 дня по 1 часу</p>
+                  <?= carbon_get_post_meta(get_the_ID(), 'period'); ?>
                 </div>
               </li>
               <li>
                 <div class="icon-listed-l">
                   <?= $icons->eye; ?>
-                  <p>Вебинар / <b>бесплатно</b></p>
+                  <?= carbon_get_post_meta(get_the_ID(), 'type'); ?>
                 </div>
               </li>
             </ul>
