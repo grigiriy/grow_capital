@@ -1,5 +1,5 @@
 <header class="mt-0">
-  <section class="image_bg" style="background-image: url(<?= get_template_directory_uri(); ?>/assets/img/2-6.jpg);">
+  <section class="image_bg index" style="background-image: url(<?= get_template_directory_uri(); ?>/assets/img/2-6.jpg);">
     <div class="container-w">
       <div class="pt-60 pb-60 fc-light">
         <div class="lim-12">

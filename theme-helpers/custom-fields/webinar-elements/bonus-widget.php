@@ -6,12 +6,13 @@ use Carbon_Fields\Field;
 Block::make(__('Webinar Bonus Widget'))
   ->add_fields([
     Field::make('html', 'crb_information_webinar')
-      ->set_html('<h2 style="color:blue; padding: 20px;">Бонус</h2>')
+      ->set_html('<h2 style="color:blue; padding: 20px;">Бонус</h2>'),
+    // Field::make('text', 'subtitle', 'Подзаг'),
   ])
   ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
 ?>
 
-  <section class="mb-60 landing-bottom">
+  <section class="mb-60 landing-bottom <?php foreach ($attributes as $attribute){ echo $attribute.' ';}?> ">
     <div class="container-w pb-30">
       <div class="brdl pd-30 brdw-2 brdr-c brdc brdl-0-9 pd-0-9 pd-0-sm">
         <p class="h4 mb-20">дополнительный бонус</p>

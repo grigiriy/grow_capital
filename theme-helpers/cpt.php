@@ -20,7 +20,7 @@ function true_register_post_type_init()
         'labels' => $labels,
         'public' => true,
         'show_ui' => true,
-        'has_archive' => true,
+        'has_archive' => false,
         'show_in_rest' => true,
         'menu_position' => 20,
         'menu_icon' => 'dashicons-calendar-alt',

@@ -18,7 +18,7 @@ Block::make(__('Webinar Header Widget'))
 
   <header class="mt-0">
 
-    <section class="image_bg" style="background-image: url(<?= wp_get_attachment_image_url($fields['bg'], 'full'); ?>);">
+    <section class="image_bg webinar_free" style="background-image: url(<?= wp_get_attachment_image_url($fields['bg'], 'full'); ?>);">
       <div class="container-w">
         <div class="pt-60 pb-60 pb-f-05-sm fc-light">
           <div class="row">
