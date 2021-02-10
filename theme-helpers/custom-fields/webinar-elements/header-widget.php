@@ -9,6 +9,8 @@ Block::make(__('Webinar Header Widget'))
       ->set_html('<h2 style="color:blue; padding: 20px;">Хедер</h2>'),
     Field::make('image', 'bg', 'Фоновая картинка'),
     Field::make('text', 'subtitle', 'Подзаг'),
+    Field::make('select', 'widget_id', 'Виджет Имейла:')
+      ->add_options(get_widgets_arr()),
     Field::make('rich_text', 'text_content', 'Текст')
   ])
   ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
@@ -30,7 +32,6 @@ Block::make(__('Webinar Header Widget'))
                 <input type="text" class="wdth-66" placeholder="Введите ваш эл. адрес" name="formParams[email]" value="">
                 <button type="submit" id="button1168115" class="btn" onclick="if(window['btnprs600ef20b0e3d2']){return false;}window['btnprs600ef20b0e3d2']=true;setTimeout(function(){window['btnprs600ef20b0e3d2']=false},6000);return true;">
                   Записаться</button>
-
                 <input type="hidden" id="329167600ef20aeef92" name="__gc__internal__form__helper" class="__gc__internal__form__helper" value="">
                 <input type="hidden" id="329167600ef20aeef92ref" name="__gc__internal__form__helper_ref" class="__gc__internal__form__helper_ref" value="">
                 <input type="hidden" name="requestTime" value="1611592203">

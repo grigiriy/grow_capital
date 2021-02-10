@@ -32,14 +32,7 @@ Block::make(__('Subscribe Form'))
         echo carbon_get_post_meta($widget_1_id, 'content');
       }
 
-      if($widget_2_id !== '-') { ?>
-      <div class="wa-btn sidebar">
-        <a href="https://wa.me/<?= preg_replace('/[^0-9]/', '', carbon_get_theme_option('wa')); ?>" target="_blank">
-          <img src="<?= get_template_directory_uri(); ?>/assets/img/whatsapp.png" class="icon-50" alt=""> Подписаться
-        </a>
-      </div>
-
-      <?php
+      if($widget_2_id !== '-') {
       echo carbon_get_post_meta($widget_2_id, 'content');
       } ?>
 

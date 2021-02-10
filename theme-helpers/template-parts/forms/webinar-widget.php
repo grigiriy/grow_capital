@@ -27,7 +27,7 @@ global $icons;
   </ul>
 
   <?php if(1>2){ ?>
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-md-8 pr-0 lim-md lim-smd">
       <script id="3563c0962a77903244383435ad6f7816855ee0e2" src="https://edu.growcapital.ru/pl/lite/widget/script?id=327422"></script>
     </div>
@@ -38,13 +38,14 @@ global $icons;
       </a>
     </div>
     </div>
-  </div>
+  </div> -->
   <?php } else { ?>
     <div class="col-sm-8 mx-auto"> 
     <?php
-    set_query_var( 'is_webinar', true );
-    get_template_part('theme-helpers/template-parts/forms/webinar', 'buttons');
-    set_query_var( 'is_webinar', false );
+    // set_query_var( 'is_webinar', true );
+    // get_template_part('theme-helpers/template-parts/forms/webinar', 'buttons');
+    // set_query_var( 'is_webinar', false );
+    echo carbon_get_post_meta(241, 'content');
     ?>
     </div>
   <?php } ?>

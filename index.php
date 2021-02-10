@@ -170,15 +170,24 @@ get_header(); ?>
 
     <div class="lim-12 index-bottom-widget">
       <?php
-      set_query_var( 'is_webinar', true );
-      get_template_part('theme-helpers/template-parts/forms/services', 'buttons');
-      set_query_var( 'is_webinar', false ); ?>
+      // set_query_var( 'is_webinar', true );
+      // get_template_part('theme-helpers/template-parts/forms/services', 'buttons');
+      // set_query_var( 'is_webinar', false );
+      echo carbon_get_post_meta(245, 'content');
+      ?>
       <div class="mb-30 brdl pd-20 brdw-3 brdc brdl-0-9 pd-0-9 pd-0-sm bg-light bg-none-9">
-        <?php get_template_part('theme-helpers/template-parts/forms/services', 'form'); ?>
+        <?php
+        // get_template_part('theme-helpers/template-parts/forms/services', 'form');
+        if(preg_match("/(^|\|)success_form/",implode("|",array_keys($_GET)))){?>
+          <h3>Спасибо! Доступ к материалам отправлен вам на почту.</h3>
+        <?php } else {
+        echo carbon_get_post_meta(251, 'content');
+        }
+        ?>
 
 
         <?php if (1 > 2) { ?>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-8 pr-0 lim-md lim-smd">
             <script id="e52e8e989fd7cb49a5a6fdb2148f3071281799d4" src="https://edu.growcapital.ru/pl/lite/widget/script?id=327501&rand1234"></script>
           </div>
@@ -189,7 +198,7 @@ get_header(); ?>
               </a>
             </div>
           </div>
-        </div>
+        </div> -->
         <?php } ?>
 
       </div>

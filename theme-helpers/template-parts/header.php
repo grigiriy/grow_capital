@@ -7,7 +7,7 @@
             <h1 class="mb-20">
               <div class="fs-xl mb-10">Grow Capital
               </div>
-              Финансовое образование и&nbsp;сервисы для&nbsp;эффективного управлении инвестициями
+              Финансовое образование и&nbsp;сервисы для&nbsp;эффективного управления инвестициями
             </h1>
           </div>
         </div>
@@ -16,12 +16,21 @@
             <div class="col-lg-6">
               <div class=" mb-30 brdl pd-20">
                 <div>
-                  <?php get_template_part('theme-helpers/template-parts/forms/services', 'form'); ?>
+                  <?php
+                  // get_template_part('theme-helpers/template-parts/forms/services', 'form');
+                  if(preg_match("/(^|\|)success_form/",implode("|",array_keys($_GET)))){?>
+                    <h3>Спасибо! Доступ к материалам отправлен вам на почту.</h3>
+                  <?php } else {
+                  echo carbon_get_post_meta(251, 'content');
+                  }
+                  ?>
                 </div>
               </div>
               <?php
-              set_query_var( 'is_webinar', false );
-              get_template_part('theme-helpers/template-parts/forms/services', 'buttons'); ?>
+              // set_query_var( 'is_webinar', false );
+              // get_template_part('theme-helpers/template-parts/forms/services', 'buttons');
+              echo carbon_get_post_meta(245, 'content');
+              ?>
             </div>
             <div class="col-lg-6">
               <p class="fs-l fw-5">Выберите месенджер или оставьте e-mail и мы пришлем вам доступ ко всем бесплатным сервисам и образовательным программам.
@@ -32,7 +41,7 @@
           </div>
 
           <?php if (1 > 2) { ?>
-            <div class="row">
+            <!-- <div class="row">
               <div class="col-md-8 pr-0 lim-md lim-smd">
                 <script id="e52e8e989fd7cb49a5a6fdb2148f3071281799d4" src="https://edu.growcapital.ru/pl/lite/widget/script?id=327501&rand123"></script>
               </div>
@@ -43,7 +52,7 @@
                   </a>
                 </div>
               </div>
-            </div>
+            </div> -->
           <?php } ?>
 
         </div>

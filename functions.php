@@ -90,6 +90,7 @@ function crb_register_custom_fields() {
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/bottom-widget.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/excel.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/formula.php';
+  include_once __DIR__ . '/theme-helpers/custom-fields/widgets/insert_widget.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/link.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/quote.php';
   include_once __DIR__ . '/theme-helpers/custom-fields/widgets/subscribe.php';

@@ -12,7 +12,9 @@ Block::make(__('Webinar Programm Widget'))
 
     global $icons;
 ?>
-  <section class="mb-50 <?php foreach ($attributes as $attribute){ echo $attribute.' ';}?>">
+  <section class="mb-50 <?php foreach ($attributes as $attribute) {
+                          echo $attribute . ' ';
+                        } ?>">
     <div class="container-w">
       <div class="lim-12">
         <div class="brdl pd-30 brdw-2 brdr-c brdc brdl-0-9 pd-0-9 pd-0-sm">
@@ -199,7 +201,13 @@ Block::make(__('Webinar Programm Widget'))
             <p class="fw-5 fs-l fs-n-sm">Получите ссылку на вебинар и полезные материалы через удобный вам мессенджер
               или на почту.</p>
 
-            <div class="row mb-30">
+              
+              <?php echo carbon_get_post_meta(241, 'content'); ?>
+
+              <?php echo carbon_get_post_meta(247, 'content'); ?>
+
+            <?php if (1 > 2) { ?>
+              <!-- <div class="row mb-30">
               <div class="col-sm-4 txt-c">
                 <img src="<?= get_template_directory_uri(); ?>/assets/img/telegram.png" class="mb-20 icon-75" alt="">
                 <p class="fs-s fw-6">Записаться через Телеграмм</p>
@@ -212,9 +220,9 @@ Block::make(__('Webinar Programm Widget'))
                 <img src="<?= get_template_directory_uri(); ?>/assets/img/vk.png" class="mb-20 icon-75" alt="">
                 <p class="fs-s fw-6">Записаться через ВК</p>
               </div>
-            </div>
+            </div> -->
 
-            <form class="form-goriz mb-30" id="ltForm9184268" action="https://edu.growcapital.ru/pl/lite/block-public/process-html?id=969696534" method="post" data-open-new-window="0">
+              <!-- <form class="form-goriz mb-30" id="ltForm9184268" action="https://edu.growcapital.ru/pl/lite/block-public/process-html?id=969696534" method="post" data-open-new-window="0">
               <input type="hidden" name="formParams[setted_offer_id]">
               <input type="text" class="wdth-66" placeholder="Введите ваш эл. адрес" name="formParams[email]" value="">
               <button type="submit" id="button1168115" class="btn btn-contr" onclick="if(window['btnprs600ef20b0e3d2']){return false;}window['btnprs600ef20b0e3d2']=true;setTimeout(function(){window['btnprs600ef20b0e3d2']=false},6000);return true;">
@@ -238,7 +246,9 @@ Block::make(__('Webinar Programm Widget'))
                   "&loc=" + encodeURIComponent(document.location.href);
                 document.getElementById('gccounterImgContainer').innerHTML = "<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";
               });
-            </script>
+            </script> -->
+            <?php } ?>
+
 
 
           </div>

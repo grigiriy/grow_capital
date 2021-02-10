@@ -7,6 +7,10 @@ Block::make(__('Webinar Bonus Widget'))
   ->add_fields([
     Field::make('html', 'crb_information_webinar')
       ->set_html('<h2 style="color:blue; padding: 20px;">Бонус</h2>'),
+      Field::make('select', 'widget_id', 'Виджет Имейла:')
+      ->add_options(get_widgets_arr()),
+      Field::make('select', 'widget_id_soc', 'Виджет кнопок:')
+      ->add_options(get_widgets_arr()),
     // Field::make('text', 'subtitle', 'Подзаг'),
   ])
   ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
@@ -31,7 +35,11 @@ Block::make(__('Webinar Bonus Widget'))
           <div class="col-lg-6 mb-30">
             <div class="pd-30 brdw-2 bg-accent">
               <p class="h3 mb-30 txt-c">Зарегистрироваться на обучение и получить доступ к материалам</p>
-              <div class="row mb-30">
+              <?php echo carbon_get_post_meta($fields['widget_id'], 'content'); ?>
+              <?php echo carbon_get_post_meta($fields['widget_id_soc'], 'content'); ?>
+
+              <?php if(1>2){ ?>
+              <!-- <div class="row mb-30">
                 <div class="col-sm-4 txt-c">
                   <img src="<?= get_template_directory_uri(); ?>/assets/img/telegram.png" class="mb-20 icon-75" alt="">
                   <p class="fs-s fw-6">Записаться через Телеграмм</p>
@@ -69,7 +77,8 @@ Block::make(__('Webinar Bonus Widget'))
                     "&loc=" + encodeURIComponent(document.location.href);
                   document.getElementById('gccounterImgContainer').innerHTML = "<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";
                 });
-              </script>
+              </script> -->
+              <?php } ?>
 
 
             </div>

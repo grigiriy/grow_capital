@@ -5780,6 +5780,12 @@ html.remodal-is-locked {
   margin: 3px;
   text-align: left;
 }
+.tg-btn{
+  background: #039be5;
+}
+.vk-btn{
+  background: #4d76a1;
+}
 .wa-btn.sidebar {
   margin: 15px 5px 10px 0 !important;
 }
@@ -5828,4 +5834,15 @@ a.tg,
 a.wa {
   color: #191919;
   text-decoration: none;
+}
+.additional_text {
+  display: none;
+}
+.index-bottom-widget .additional_text {
+  display: block;
+}
+
+.image_bg .btn.btn-contr {
+  background: #ffca17;
+  color: #000;
 }
