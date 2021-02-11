@@ -1244,7 +1244,7 @@ a.fc-dark:hover {
 }
 .infobl .card ol,
 .infobl .card ul,
-.infobl .card p {
+.infobl .card p, .infobl .h1, .infobl .h2, .infobl .h3, .infobl .h4, .infobl .h5, .infobl .h6 {
   font-family: 'Montserrat', 'Segoe UI', Open sans, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
     Arial, sans-serif;
 }
