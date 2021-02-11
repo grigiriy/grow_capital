@@ -48,9 +48,8 @@ Block::make(__('Bottom Widget'))
         <img src="<?= get_template_directory_uri(); ?>/assets/img/sistema-investirovaniya.png" alt="">
         <figcaption class="pl-10">
           <p class="h6">
-            <a target="_blank" href="/kak-sostavit-investicionnyj-portfel/" class="fc-link"><?= $fields['subhead_'.$i]; ?></a>
+            <a target="_blank" href="<?= $fields['is_gc_'.$i] ? carbon_get_post_meta($fields['block_id_'.$i], 'link') : get_the_permalink($fields['block_id_'.$i]); ?>" class="fc-link"><?= $fields['subhead_'.$i]; ?></a>
           </p>
-
         </figcaption>
       </figure>
     </div>
