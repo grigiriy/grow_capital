@@ -1161,7 +1161,6 @@ a.fc-dark:hover {
 .table tr:hover {
   background: #efefef;
 }
-
 .table th,
 .table td {
   padding: 0.75rem 0;
@@ -1202,7 +1201,11 @@ a.fc-dark:hover {
 .stacktable.small-only {
   display: none;
 }
-
+table:not(.table) td {
+  padding: 10px;
+  vertical-align: top;
+  border: 1px solid #444;
+}
 .container,
 .container-w {
   width: 100%;
@@ -5808,11 +5811,6 @@ html.remodal-is-locked {
 .ya-share2 {
   width: 40px !important;
 }
-.infobl td {
-  border: solid 1px #333;
-  padding: 10px;
-  font-size: 0.6em;
-}
 @media (min-width: 769px) {
   .ya-share2__container {
     position: fixed !important;
@@ -5845,4 +5843,12 @@ a.wa {
 .image_bg .btn.btn-contr {
   background: #ffca17;
   color: #000;
+}
+.d-none{display:none}
+.d-none.d-md-block {display:block}
+.d-md-none{display:none}
+
+@media (max-width: 768px) {
+  .d-none.d-md-block {display:none}
+  .d-md-none{display:block}
 }

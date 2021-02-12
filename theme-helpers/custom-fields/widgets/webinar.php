@@ -15,7 +15,6 @@ Block::make(__('Webinar Form'))
 
   $course_id = $fields['webinar_id'];
 ?>
-
   <div class="brdc pd-30-9 bg-dark-9 fc-light-9 mb-30 sidebar-widget">
     <div class="brdl-shot">
     </div>
@@ -24,7 +23,7 @@ Block::make(__('Webinar Form'))
         <img src="<?= get_template_directory_uri(); ?>/assets/img/chart-4.png" alt="">
         <figcaption class="pl-10">
           <p class="h5">
-            <a href="<?= $fields['is_gc'] ? carbon_get_post_meta($course_id, 'link') : get_the_permalink($course_id); ?>" class="fc-link fc-light-9"><?= carbon_get_post_meta($course_id, 'headline'); ?></a>
+            <a href="<?= !empty($fields['is_gc']) ? carbon_get_post_meta($course_id, 'link') : get_the_permalink($course_id); ?>" class="fc-link fc-light-9"><?= carbon_get_post_meta($course_id, 'headline'); ?></a>
           </p>
           <div class="svg-black fs-s">
             <div class="icon-listed">
@@ -36,7 +35,7 @@ Block::make(__('Webinar Form'))
     </div>
     <p class="mb-10 fw-5"><?= carbon_get_post_meta($course_id, 'subtitle'); ?></p>
     <div class="fs-s"><?= carbon_get_post_meta($course_id, 'lead'); ?></div>
-    <a href="<?= $fields['is_gc'] ? carbon_get_post_meta($course_id, 'link') : get_the_permalink($course_id); ?>" class="btn-small-pt">Посмотреть
+    <a href="<?= !empty($fields['is_gc']) ? carbon_get_post_meta($course_id, 'link') : get_the_permalink($course_id); ?>" class="btn-small-pt">Посмотреть
       <span class="icon-angle-right"> </span>
     </a>
 
