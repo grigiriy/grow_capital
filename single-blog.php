@@ -67,7 +67,7 @@ get_header(); ?>
           </div>
           <div class="col-lg-4">
 
-            <div class="brdc pd-30-9 bg-dark-9 fc-light-9 hider-9">
+            <div class="brdc pd-30-9 bg-dark-9 fc-light-9 hider-9 sidebar-widget">
               <div class="brdl-shot"></div>
               <div class="facecrd-55">
                 <figure class="mb-0">
@@ -95,7 +95,7 @@ get_header(); ?>
           </div>
         </div>
 
-        <div class="row">
+        <div class="row bottom-widget">
 
           <div class="col-lg-4 mb-50 lim-smd lim-md">
             <div class="facecrd-65">
