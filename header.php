@@ -4,17 +4,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?= wp_kses(apply_filters( 'the_content', get_post_field('_genesis_title') ),'strip'); ?></title>
+  <title><?= wp_kses(apply_filters('the_content', get_post_field('_genesis_title')), 'strip'); ?></title>
   <?php wp_head() ?>
   <script src="https://yastatic.net/share2/share.js" async></script>
 
-  <?php $keywords = explode(', ', carbon_get_post_meta($post->ID, 'keywords'));
-  if ($keywords) {
-    echo '<meta name="keywords" content="';
-    foreach ($keywords as $keyword) {
-      echo $keyword . ',';
+  <?php
+  if ($post) {
+    $keywords = explode(', ', carbon_get_post_meta($post->ID, 'keywords'));
+    if ($keywords) {
+      echo '<meta name="keywords" content="';
+      foreach ($keywords as $keyword) {
+        echo $keyword . ',';
+      }
+      echo '">';
     }
-    echo '">';
   }
   ?>
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -26,7 +29,7 @@
   <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
   <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -34,7 +37,24 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(71616154, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/71616154" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m, e, t, r, i, k, a) {
+      m[i] = m[i] || function() {
+        (m[i].a = m[i].a || []).push(arguments)
+      };
+      m[i].l = 1 * new Date();
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    ym(71616154, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true
+    });
+  </script> <noscript>
+    <div><img src="https://mc.yandex.ru/watch/71616154" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript> <!-- /Yandex.Metrika counter -->
 </head>
 
 <body id="page-top">
@@ -49,25 +69,25 @@
           </div>
           <div class="ml-auto px-40 mg-auto-9 social-wrapper">
             <?php global $icons;
-            
-            $soc_arr = ['vk','fb','ig','tg','yt'];
 
-            foreach($soc_arr as $soc) {
-              if(carbon_get_theme_option($soc)){
+            $soc_arr = ['vk', 'fb', 'ig', 'tg', 'yt'];
+
+            foreach ($soc_arr as $soc) {
+              if (carbon_get_theme_option($soc)) {
             ?>
-              <a href="<?= carbon_get_theme_option($soc); ?>" target="_blank"><?= $icons->$soc; ?></a>
+                <a href="<?= carbon_get_theme_option($soc); ?>" target="_blank"><?= $icons->$soc; ?></a>
             <?php
               }
             }
             ?>
-            
+
           </div>
           <div class="btn-header-wrappeer">
             <!-- <div class="mb-f-05 txt-c none"><a href="<?= carbon_get_theme_option('login'); ?>" class="fc-dark fd-n fs-xs">Вход</a>  |  <a href="<?= carbon_get_theme_option('login'); ?>"
                 class="fc-dark fd-n fs-xs">Регистрация</a></div> -->
             <a href="<?= carbon_get_theme_option('services'); ?>" class="btn btn-ok">Полезные сервисы</a>
             <div class="txt-c none mt-10">
-              <a class="fd-n fw-5" href="tel:<?= preg_replace('/[^0-9]/', '', str_replace('+7', '8',carbon_get_theme_option('phone'))); ?>"><?= carbon_get_theme_option('phone'); ?></a>
+              <a class="fd-n fw-5" href="tel:<?= preg_replace('/[^0-9]/', '', str_replace('+7', '8', carbon_get_theme_option('phone'))); ?>"><?= carbon_get_theme_option('phone'); ?></a>
             </div>
           </div>
 
