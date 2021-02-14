@@ -7,13 +7,8 @@ get_header(); ?>
 <section class="header mb-60">
   <div class="container-w">
     <div class="row mb-20 pt-40">
-
       <div class="col-xl-offset-3 col-xl-9 fs-xs fw-3">
-
-<?php
-$cat = get_the_terms( $post->ID, 'category_blog_tax' )[0];
-?>
-
+        <?php $cat = get_the_terms( $post->ID, 'category_blog_tax' )[0]; ?>
         <a href="/category_blog/<?= $cat->slug;?>"><?= $cat->name;?></a> <span class="fc-contr">/</span> Расчет доходности портфеля
       </div>
     </div>
