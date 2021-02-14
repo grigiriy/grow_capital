@@ -45,7 +45,7 @@ get_header(); ?>
             foreach ($terms as $term) { ?>
 
               <li>
-                <a href="/blog/<?= $term->slug; ?>">
+                <a href="/category_blog/<?= $term->slug; ?>">
                   <?= $term->name; ?>
                 </a>
               </li>
