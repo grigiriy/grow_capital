@@ -87,9 +87,9 @@ get_header(); ?>
               </div>
               <p class="mb-10 fw-5">Риски и доходность финансовых инструментов</p>
               <p class="fs-s">Сколько можно заработать или потерять на финансовых рынках? Как оценить риски, связанные с инвестированием в те или иные инструменты?</p>
-              <button href="/webinars/kak-vybrat-vo-chto-investirovat/" class="btn-small-pt">Посмотреть
+              <a href="/webinars/kak-vybrat-vo-chto-investirovat/" class="btn-small-pt">Посмотреть
                 <span class="icon-angle-right"> </span>
-              </button>
+              </a>
 
             </div>
           </div>
