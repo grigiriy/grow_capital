@@ -9,7 +9,7 @@ get_header(); ?>
     <div class="row mb-20 pt-40">
       <div class="col-xl-offset-3 col-xl-9 fs-xs fw-3">
         <?php $cat = get_the_terms( $post->ID, 'category_blog_tax' )[0]; ?>
-        <a href="/category_blog/<?= $cat->slug;?>"><?= $cat->name;?></a> <span class="fc-contr">/</span> Расчет доходности портфеля
+        <a href="/blog/<?= $cat->slug;?>"><?= $cat->name;?></a> <span class="fc-contr">/</span> Расчет доходности портфеля
       </div>
     </div>
     <div class="row mb-30">
@@ -45,7 +45,7 @@ get_header(); ?>
             foreach ($terms as $term) { ?>
 
               <li>
-                <a href="/category_blog/<?= $term->slug; ?>">
+                <a href="/blog/<?= $term->slug; ?>">
                   <?= $term->name; ?>
                 </a>
               </li>

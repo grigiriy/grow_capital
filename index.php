@@ -9,7 +9,7 @@ $loop_term_id = get_queried_object_id() !== 0 ? $cat->term_id : 'any';
     <div class="row mb-20 pt-40">
       <div class="col-xl-offset-3 col-xl-9 fs-xs fw-3">
         <?php if (get_queried_object_id() !== 0) { ?>
-        <a href="/category_blog/<?= $cat->slug;?>"><?= $cat->name; ?></a>
+        <a href="/blog/<?= $cat->slug;?>"><?= $cat->name; ?></a>
         <?php } else { ?>
           <a href="/">Главная</a>
         <?php } ?>
@@ -48,7 +48,7 @@ $loop_term_id = get_queried_object_id() !== 0 ? $cat->term_id : 'any';
             foreach ($terms as $term) { ?>
 
               <li>
-                <a href="/category_blog/<?= $term->slug; ?>">
+                <a href="/blog/<?= $term->slug; ?>">
                   <?= $term->name; ?>
                 </a>
               </li>

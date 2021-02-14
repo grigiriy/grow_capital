@@ -21,7 +21,7 @@ function add_new_taxonomies()
           'label' => 'Категории',
           'hierarchical' => true,
           'labels' => $labels,
-          'rewrite' => array('slug' => 'category_blog'),
+          'rewrite' => array('slug' => 'blog'),
         )
     );
 }
