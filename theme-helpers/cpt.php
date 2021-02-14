@@ -2,6 +2,41 @@
 function true_register_post_type_init()
 {
     $labels = [
+        'name' => 'Блог',
+        'singular_name' => 'Блог',
+        'add_new' => 'Добавить пост',
+        'add_new_item' => 'Добавить новый пост',
+        'edit_item' => 'Редактировать пост',
+        'new_item' => 'Новый пост',
+        'all_items' => 'Все посты',
+        'view_item' => 'Просмотр постов на сайте',
+        'search_items' => 'Искать посты',
+        'not_found' => 'Постов не найдено.',
+        'not_found_in_trash' => 'В корзине нет постов.',
+        'menu_name' => 'Блог'
+    ];
+
+    $args = [
+        'labels' => $labels,
+        'public' => true,
+        'show_ui' => true,
+        'has_archive' => true,
+        'show_in_rest' => true,
+        'menu_position' => 20,
+        'menu_icon' => 'dashicons-format-aside',
+        'supports' => array(
+            'title',
+            'editor',
+            'page-attributes',
+            'thumbnail',
+            'revisions',
+            'excerpt',
+            'taxonomies',
+        )
+      ];
+    register_post_type ( 'blog', $args );
+
+    $labels = [
         'name' => 'Вебинары',
         'singular_name' => 'Вебинар',
         'add_new' => 'Добавить вебинар',
@@ -33,7 +68,6 @@ function true_register_post_type_init()
         )
       ];
     register_post_type ( 'webinars', $args );
-
 
     $labels = [
         'name' => 'Отзывы',
