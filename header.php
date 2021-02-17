@@ -58,7 +58,7 @@
 </head>
 
 <body id="page-top">
-  <div class="header-wrapper bg-grdn-down pb-10 pb-0-9 pb-0-sm">
+  <div class="header-wrapper <?= is_page_template('main.php') || is_page_template('single-webinars.php') || is_page_template('page-clear.php') ? 'bg-grdn-down' : ''; ?> pb-10 pb-0-9 pb-0-sm">
     <div class="logo-wrap">
       <div class="container-w">
         <div class="d-flex flex-center">
@@ -129,5 +129,4 @@
   <?php
   if (!is_user_logged_in()) {
     exit();
-  };
-  ?>
+  }; ?>
