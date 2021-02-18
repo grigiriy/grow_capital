@@ -34,8 +34,10 @@
             <p class="pt-20 mb-0" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
               <span itemprop="addressLocality">Москва</span>,
               <span itemprop="streetAddress"><?= carbon_get_theme_option('address'); ?></span>
-              <a href="/privacy-policy/">Политика конфиденциальности</a>
-              <a href="/oferta/">Публичная оферта</a>
+              <br>
+              <a class="fc-light" href="/privacy-policy/">Политика конфиденциальности</a>
+              <br>
+              <a class="fc-light" href="/oferta/">Публичная оферта</a>
             </p>
         </div>
       </div>
