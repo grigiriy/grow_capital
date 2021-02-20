@@ -11,6 +11,8 @@ Block::make(__('Webinar Header Widget'))
     Field::make('text', 'subtitle', 'Подзаг'),
     Field::make('select', 'widget_id', 'Виджет Имейла:')
       ->add_options(get_widgets_arr()),
+    Field::make('select', 'widget_id_soc', 'Виджет Соц:')
+      ->add_options(get_widgets_arr()),
     Field::make('rich_text', 'text_content', 'Текст')
   ])
   ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
@@ -20,14 +22,21 @@ Block::make(__('Webinar Header Widget'))
 
   <header class="mt-0">
 
-    <section class="image_bg <?php foreach ($attributes as $attribute){ echo $attribute.' ';}?>" style="background-image: url(<?= wp_get_attachment_image_url($fields['bg'], 'full'); ?>);">
+    <section
+      class="image_bg <?php foreach ($attributes as $attribute) { echo $attribute . ' ';} ?>"
+      style="background-image: url(<?= wp_get_attachment_image_url($fields['bg'], 'full'); ?>);"
+    >
       <div class="container-w">
         <div class="pt-60 pb-60 pb-f-05-sm fc-light">
           <div class="row">
             <div class="col-lg-5">
               <div class="h1 mb-20"><span class="fs-l"><?= get_the_title(); ?></span></div>
 
-              <form class="form-goriz mb-20" id="ltForm9184268" action="https://edu.growcapital.ru/pl/lite/block-public/process-html?id=969696534" method="post" data-open-new-window="0">
+              <p class="fs-l fw-5 mb-40">
+                Выберите месенджер или оставьте e-mail, чтобы получить достук к программе и материалам вебинара
+              </p>
+
+              <form class="form-goriz mb-40" id="ltForm9184268" action="https://edu.growcapital.ru/pl/lite/block-public/process-html?id=969696534" method="post" data-open-new-window="0">
                 <input type="hidden" name="formParams[setted_offer_id]">
                 <input type="text" class="wdth-66" placeholder="Введите ваш эл. адрес" name="formParams[email]" value="">
                 <button type="submit" id="button1168115" class="btn" onclick="if(window['btnprs600ef20b0e3d2']){return false;}window['btnprs600ef20b0e3d2']=true;setTimeout(function(){window['btnprs600ef20b0e3d2']=false},6000);return true;">
@@ -53,17 +62,14 @@ Block::make(__('Webinar Header Widget'))
                 });
               </script>
 
-              <p class="">Оставьте e-mail, чтобы получить достук к&nbsp;программе и&nbsp;материалам вебинара
-              </p>
-              <div class="">
+              <?= carbon_get_post_meta($fields['widget_id_soc'], 'content'); ?>
 
-              </div>
             </div>
             <div class="col-lg-7">
               <h1 class="mb-20"><?= esc_html($fields['subtitle']); ?></h1>
-              <p class="fs-l fw-5">
-              <?= esc_html($fields['text_content']); ?>
-              </p>
+              <div class="fs-l fw-5">
+                <?= $fields['text_content']; ?>
+              </div>
 
               <ul class="list-inline fs-l">
                 <li>
