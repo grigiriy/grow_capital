@@ -12,6 +12,7 @@ Block::make(__('Bottom Widget'))
 
     Field::make( 'text', 'subhead_1', 'Подзаг 1 блока' ),
     Field::make( 'text', 'label_1', 'Лейбл 1 блока' ),
+    Field::make( 'image', 'icon_1', 'Иконка 1 блока' ),
     Field::make( 'select', 'block_id_1', 'Блок 1:' )
       ->add_options( get_all_arr() ),
     Field::make('checkbox', 'is_gc_1', 'Ссылка на гк'),
@@ -19,6 +20,7 @@ Block::make(__('Bottom Widget'))
 
     Field::make( 'text', 'subhead_2', 'Подзаг 2 блока' ),
     Field::make( 'text', 'label_2', 'Лейбл 2 блока' ),
+    Field::make( 'image', 'icon_2', 'Иконка 2 блока' ),
     Field::make( 'select', 'block_id_2', 'Блок 2:' )
       ->add_options( get_all_arr() ),
     Field::make('checkbox', 'is_gc_2', 'Ссылка на гк'),
@@ -26,6 +28,7 @@ Block::make(__('Bottom Widget'))
 
     Field::make( 'text', 'subhead_3', 'Подзаг 3 блока' ),
     Field::make( 'text', 'label_3', 'Лейбл 3 блока' ),
+    Field::make( 'image', 'icon_3', 'Иконка 3 блока' ),
     Field::make( 'select', 'block_id_3', 'Блок 3:' )
       ->add_options( get_all_arr() ),
     Field::make('checkbox', 'is_gc_3', 'Ссылка на гк'),
@@ -45,7 +48,7 @@ Block::make(__('Bottom Widget'))
   <div class="col-lg-4 mb-50 lim-smd lim-md">
     <div class="facecrd-65">
       <figure class="mb-0">
-        <img src="<?= get_template_directory_uri(); ?>/assets/img/sistema-investirovaniya.png" alt="">
+        <img src="<?= wp_get_attachment_image_url( $fields['icon_'.$i],'thumbnail' ); ?>" alt="<?= $fields['subhead_'.$i]; ?>">
         <figcaption class="pl-10">
           <p class="h6">
             <a target="_blank" href="<?= $fields['is_gc_'.$i] ? carbon_get_post_meta($fields['block_id_'.$i], 'link') : get_the_permalink($fields['block_id_'.$i]); ?>" class="fc-link"><?= $fields['subhead_'.$i]; ?></a>
