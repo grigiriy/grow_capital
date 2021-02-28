@@ -1247,7 +1247,13 @@ table:not(.table) td {
 }
 .infobl .card ol,
 .infobl .card ul,
-.infobl .card p, .infobl .h1, .infobl .h2, .infobl .h3, .infobl .h4, .infobl .h5, .infobl .h6 {
+.infobl .card p,
+.infobl .h1,
+.infobl .h2,
+.infobl .h3,
+.infobl .h4,
+.infobl .h5,
+.infobl .h6 {
   font-family: 'Montserrat', 'Segoe UI', Open sans, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
     Arial, sans-serif;
 }
@@ -1565,6 +1571,8 @@ table:not(.table) td {
 .facecrd-65 figure img {
   max-width: 65px;
   width: 100%;
+  object-fit: contain;
+  object-position: top;
 }
 
 .facecrd-65 figure figcaption {
@@ -5783,10 +5791,10 @@ html.remodal-is-locked {
   margin: 3px;
   text-align: left;
 }
-.tg-btn{
+.tg-btn {
   background: #039be5;
 }
-.vk-btn{
+.vk-btn {
   background: #4d76a1;
 }
 .wa-btn.sidebar {
@@ -5809,7 +5817,9 @@ html.remodal-is-locked {
   margin: 0 4px 8px 0 !important;
 }
 .ya-share2 {
-  width: 40px !important;
+  width: 50px !important;
+  padding-left: 30px;
+  margin-left: auto;
 }
 @media (min-width: 769px) {
   .ya-share2__container {
@@ -5845,11 +5855,21 @@ a.wa {
   background: #ffca17;
   color: #000;
 }
-.d-none{display:none}
-.d-none.d-md-block {display:block}
-.d-md-none{display:none}
+.d-none {
+  display: none;
+}
+.d-none.d-md-block {
+  display: block;
+}
+.d-md-none {
+  display: none;
+}
 
 @media (max-width: 768px) {
-  .d-none.d-md-block {display:none}
-  .d-md-none{display:block}
+  .d-none.d-md-block {
+    display: none;
+  }
+  .d-md-none {
+    display: block;
+  }
 }

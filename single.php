@@ -15,7 +15,7 @@ get_header(); ?>
     </div>
     <div class="row mb-30">
       <div class="col-lg-3 hider-9 left-sidebar">
-        <div class="mb-30 pr-10">
+        <div class="mb-30 pr-30">
           <div class="d-flex">
             <ul class="fs-s mb-30 list-sidebar">
               <div class="fw-6 mb-f-07">Оглавление</div>
