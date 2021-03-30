@@ -360,6 +360,11 @@ img {
   width: 100%;
 }
 
+picture img {
+  width: auto;
+  max-width: 100%;
+}
+
 img.icon-50 {
   max-width: 50px;
 }
@@ -394,11 +399,9 @@ small {
 .blockquote,
 blockquote {
   display: block;
-  border-top: 2px solid #ffca17;
-  border-bottom: 2px solid #ffca17;
+  border-left: 2px solid #ffca17;
   clear: both;
-  font-size: 80%;
-  padding: 1.625em 0 1.875em;
+  padding: 1.625em 0 1.875em 2.625em;
   margin: 2.25rem 0;
 }
 
@@ -1014,11 +1017,11 @@ a.fc-dark:hover {
 }
 
 .fs-s {
-  font-size: 85% !important;
+  font-size: 90% !important;
 }
 
 .fs-xs {
-  font-size: 80% !important;
+  font-size: 85% !important;
 }
 .fs-l {
   font-size: 125% !important;
@@ -1219,9 +1222,6 @@ table:not(.table) td {
   max-width: 1360px;
 }
 
-.infobl {
-  font-size: 125%;
-}
 .infobl img,
 .infobl iframe,
 .infobl .formula {
@@ -1240,23 +1240,6 @@ table:not(.table) td {
   font-size: 1.9em;
 }
 
-.infobl ol,
-.infobl ul,
-.infobl p {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-.infobl .card ol,
-.infobl .card ul,
-.infobl .card p,
-.infobl .h1,
-.infobl .h2,
-.infobl .h3,
-.infobl .h4,
-.infobl .h5,
-.infobl .h6 {
-  font-family: 'Montserrat', 'Segoe UI', Open sans, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
-    Arial, sans-serif;
-}
 .infobl p:not(class^='ml-'),
 .infobl p:not(class^='mr-'),
 .infobl p:not(class^='mb-'),
@@ -1264,14 +1247,6 @@ table:not(.table) td {
   margin: 0 0 1.2em;
 }
 
-.infobl ol,
-.infobl ul {
-  margin: 0 0 2em;
-}
-
-.infobl ul li {
-  margin: 0 0 1em 1.3em;
-}
 
 .infobl figure {
   margin-bottom: 2em;
@@ -1290,15 +1265,6 @@ table:not(.table) td {
   font-weight: 500;
 }
 
-.infobl .blockquote p,
-.infobl blockquote p,
-.infobl .blockquote ul,
-.infobl blockquote ul,
-.infobl .blockquote ol,
-.infobl blockquote ol {
-  font-family: 'Montserrat', 'Segoe UI', Open sans, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
-    Arial, sans-serif;
-}
 .infobl .blockquote ul li,
 .infobl blockquote ul li {
   margin: 0 0 0.9em 1.8em;
@@ -3071,7 +3037,7 @@ li.l7::before {
     z-index: 1000;
     padding-top: 0;
   }
-
+  .blockquote, blockquote { padding: 1.5em 0 1.5em 2em;}  
   .logo-wrap {
     position: absolute;
   }
@@ -4102,9 +4068,22 @@ li.l7::before {
   .navigation-menu {
     margin-top: 7px;
   }
+    .blockquote, blockquote {
+    border-left: none;
+    border-top: 2px solid #ffca17;
+    border-bottom: 2px solid #ffca17;    
+    clear: both;
+    padding: 1.5em 0 1.5em;
+    
+    }
 }
 
 @media (max-width: 575.8px) {
+  .px-40 {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
   h1,
   .h1 {
     font-size: 1.8em;
@@ -5134,8 +5113,8 @@ li.l7::before {
 @media (min-width: 992px) {
   .container,
   .container-w {
-    padding-right: 3rem;
-    padding-left: 3rem;
+    padding-right: 5rem;
+    padding-left: 5rem;
   }
 
   .lim-9 {
@@ -5763,20 +5742,6 @@ html.remodal-is-locked {
   margin-bottom: 3px;
 }
 
-.ya-share2 {
-  padding-left: 10px;
-  margin-left: auto;
-}
-
-.ya-share2__list {
-  flex-direction: column;
-  width: 40px;
-}
-
-.ya-share2__item:before {
-  content: '';
-}
-
 .pr-0 {
   padding-right: 0;
 }
@@ -5808,6 +5773,14 @@ html.remodal-is-locked {
 .wa-btn a img {
   padding: 2px 5px 5px;
 }
+.ya-share2__list {
+  flex-direction: column;
+  width: 40px;
+}
+
+.ya-share2__item:before {
+  content: '';
+}
 .ya-share2__container_size_l .ya-share2__badge .ya-share2__icon {
   height: 40px !important;
   width: 40px !important;
@@ -5817,9 +5790,9 @@ html.remodal-is-locked {
   margin: 0 4px 8px 0 !important;
 }
 .ya-share2 {
-  width: 50px !important;
-  padding-left: 30px;
-  margin-left: auto;
+  margin-left: -4rem;
+  width: 45px !important;
+  margin-top: 13px;
 }
 @media (min-width: 769px) {
   .ya-share2__container {

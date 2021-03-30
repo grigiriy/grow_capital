@@ -57,7 +57,7 @@ Block::make(__('Bottom Widget'))
       </figure>
     </div>
     <p class="mb-10 fs-s fw-5"><?= $fields['label_'.$i]; ?></p>
-    <p class="fs-s"><?= $fields['content_'.$i]; ?></p>
+    <div class="fs-s mb-30"><?= wpautop($fields['content_'.$i]); ?></div>
     <a class="btn-small btn-contr hider-9" target="_blank" href="<?= $fields['is_gc_'.$i] ? carbon_get_post_meta($fields['block_id_'.$i], 'link') : get_the_permalink($fields['block_id_'.$i]); ?>">Подробнее</a>
   </div>
 <?php } ?>

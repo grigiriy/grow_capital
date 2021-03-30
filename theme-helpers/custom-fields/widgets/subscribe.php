@@ -25,8 +25,7 @@ Block::make(__('Subscribe Form'))
     <div class="brdl-shot">
       <h4><?= $fields['headline']; ?></h4>
     </div>
-    <p class="h5 mb-f-08"><?= $fields['content']; ?></p>
-
+    <div class="mb-f-08"><?= $fields['content']; ?>
       <?php
       if($widget_1_id !== '-') {
         echo carbon_get_post_meta($widget_1_id, 'content');
@@ -35,7 +34,7 @@ Block::make(__('Subscribe Form'))
       if($widget_2_id !== '-') {
       echo carbon_get_post_meta($widget_2_id, 'content');
       } ?>
-
+    </div>
   </div><!-- /.brdc -->
 
 

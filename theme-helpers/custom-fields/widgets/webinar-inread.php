@@ -10,6 +10,7 @@ Block::make(__('Webinar InRead'))
     Field::make('select', 'webinar_id', 'Вебинар:')
       ->add_options(get_webinars_arr()),
     Field::make('checkbox', 'is_gc', 'ссылка на гк'),
+    Field::make('rich_text', 'content', 'Контент'),
   ])
   ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
 
@@ -47,10 +48,14 @@ Block::make(__('Webinar InRead'))
     </div>
 
     <div class="card-body pl-0-sm-md list-decor list-icon-ch">
+      <?php if (empty($fields['content'])){ ?>
       <a href="<?= !empty($fields['is_gc']) ? carbon_get_post_meta($course_id, 'link') : get_the_permalink($course_id); ?>">
         <p class="h5 mb-20"><?= carbon_get_post_meta($course_id, 'subtitle'); ?></p>
         <div class="fs-s mb-30 fc-dark"><?= carbon_get_post_meta($course_id, 'lead'); ?></div>
       </a>
+      <?php } else { ?>
+        <div class="fs-sfc-dark"><?= $fields['content']; ?></div>
+      <?php } ?>
     </div>
   </div><!-- /.card -->
 

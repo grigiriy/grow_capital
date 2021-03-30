@@ -102,7 +102,7 @@ $loop_term_id = get_queried_object_id() !== 0 ? $cat->term_id : 'any';
                   <img src="<?= get_template_directory_uri(); ?>/assets/img/chart-2.png" alt="">
                   <figcaption class="pl-10">
                     <p class="h5">
-                      <a href="https://edu.growcapital.ru/get_excel" class="fc-link fc-light-9">excel-шаблон</a>
+                      <a href="https://edu.growcapital.ru/services" class="fc-link fc-light-9">excel-шаблон</a>
                     </p>
                     <p class="mb-10 fw-5">Расчет доходности</p>
                   </figcaption>
@@ -110,10 +110,9 @@ $loop_term_id = get_queried_object_id() !== 0 ? $cat->term_id : 'any';
               </div>
               <p class="fs-s">В дополнение к статье мы подготовили специальный excel-файл для расчета доходности
                 инвестиций с учетом различных факторов.</p>
-              <button href="https://edu.growcapital.ru/get_excel" class="btn-small-pt">Скачать
+              <a href="https://edu.growcapital.ru/services" class="btn-small-pt">Скачать
                 <span class="icon-angle-right"> </span>
-              </button>
-
+              </a>
             </div>
           </div>
         </div>
