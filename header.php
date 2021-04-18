@@ -67,7 +67,10 @@
             <a href="/"><img src="<?= get_template_directory_uri(); ?>/assets/img/logo-slicky.png" class="logo-sticky" alt="" /></a>
             <a href="/"><img src="<?= get_template_directory_uri(); ?>/assets/img/logo-small.png" class="logo-small" alt="" /></a>
           </div>
-          <div class="ml-auto px-40 mg-auto-9 social-wrapper">
+          <div class="txt-c none ml-auto">
+              <a class="fd-n fw-5 fs-l fc-dark" href="tel:<?= preg_replace('/[^0-9]/', '', str_replace('+7', '8', carbon_get_theme_option('phone'))); ?>"><?= carbon_get_theme_option('phone'); ?></a>
+          </div>
+          <div class="px-40 mg-auto-9 social-wrapper">
             <?php global $icons;
 
             $soc_arr = ['vk', 'fb', 'ig', 'tg', 'yt'];
@@ -86,9 +89,7 @@
             <!-- <div class="mb-f-05 txt-c none"><a href="<?= carbon_get_theme_option('login'); ?>" class="fc-dark fd-n fs-xs">Вход</a>  |  <a href="<?= carbon_get_theme_option('login'); ?>"
                 class="fc-dark fd-n fs-xs">Регистрация</a></div> -->
             <a href="<?= carbon_get_theme_option('services'); ?>" class="btn btn-ok">Полезные сервисы</a>
-            <div class="txt-c none mt-10">
-              <a class="fd-n fw-5" href="tel:<?= preg_replace('/[^0-9]/', '', str_replace('+7', '8', carbon_get_theme_option('phone'))); ?>"><?= carbon_get_theme_option('phone'); ?></a>
-            </div>
+
           </div>
 
           <div class="hider-lg">
