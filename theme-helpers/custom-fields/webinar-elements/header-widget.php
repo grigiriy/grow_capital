@@ -29,7 +29,7 @@ Block::make(__('Webinar Header Widget'))
       <div class="container-w">
         <div class="pt-60 pb-60 pb-f-05-sm fc-light">
           <div class="row">
-            <div class="col-lg-5">
+            <div class="col-lg-6">
               <div class="h1 mb-20"><span class="fs-l"><?= get_the_title(); ?></span></div>
 
               <p class="fs-l fw-5 mb-40">
@@ -65,7 +65,7 @@ Block::make(__('Webinar Header Widget'))
               <?= carbon_get_post_meta($fields['widget_id_soc'], 'content'); ?>
 
             </div>
-            <div class="col-lg-7">
+            <div class="col-lg-6">
               <h1 class="mb-20"><?= esc_html($fields['subtitle']); ?></h1>
               <div class="fs-l fw-5">
                 <?= $fields['text_content']; ?>

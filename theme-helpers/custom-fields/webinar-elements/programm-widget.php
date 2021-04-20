@@ -202,7 +202,7 @@ Block::make(__('Webinar Programm Widget'))
               или на почту.</p>
 
               
-              <?php echo carbon_get_post_meta(241, 'content'); ?>
+              <?php echo carbon_get_post_meta(1011, 'content'); ?>
 
               <?php echo carbon_get_post_meta(247, 'content'); ?>
 
