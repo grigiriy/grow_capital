@@ -104,7 +104,7 @@ get_header(); ?>
       <div class="row">
         <div class="col-lg-4 mb-40">
           <p class="h5">
-            <a href="/posts/" class="fc-link">Статьи на сайте</a>
+            <a href="/blog_category/znaniya-i-analitika/" class="fc-link">Статьи на сайте</a>
           </p>
           <p class="fs-s">Основные знания, которыми обязательно должен владеть инвестор, и то, о чем не рассказывают
             на курсах брокеров. Важно не только научиться нажимать кнопки Купить/Продать, но и понимать как устроен
@@ -114,7 +114,7 @@ get_header(); ?>
 
         <div class="col-lg-4 mb-40">
           <p class="h5">
-            <a href="/programs/" class="fc-link">Образовательные программы</a>
+            <a href="#webinars" class="fc-link">Образовательные программы</a>
           </p>
           <p class="fs-s">Стартовые и продвинутые программы для тех, кто хочет зарабатывать на фондовом рынке
             долгосрочно:

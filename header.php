@@ -37,6 +37,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
+  <meta name="yandex-verification" content="f036e5ff8b29fa7a" />
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
     (function(m, e, t, r, i, k, a) {
@@ -127,7 +128,3 @@
       </div>
     </nav>
   </div>
-  <?php
-  if (!is_user_logged_in()) {
-    exit();
-  }; ?>

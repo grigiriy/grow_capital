@@ -24,7 +24,7 @@ get_header(); ?>
           get_template_part('theme-helpers/template-parts/contents','list'); ?>
           </ul>
         </div>
-        <?php the_content(); ?>
+        <?= get_the_content(); ?>
       </div>
     </div>
   </div>
