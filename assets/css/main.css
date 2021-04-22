@@ -5856,3 +5856,43 @@ a.wa {
 .nowrap {
   white-space: nowrap;
 }
+
+#callback_btns {
+  position: fixed;
+  bottom: 20px;
+  right: auto;
+  left: 20px;
+  display: flex;
+  z-index: 1000;
+}
+
+#callback_btns img {
+  width: 55px;
+}
+
+@media (min-width:768px) {
+  #callback_btns {
+    left: auto;
+    right: 20px;
+  }
+
+  #callback_btns a {
+    margin-left: 20px;
+    padding: 5px 0;
+  }
+}
+
+@media (max-width:767px) {
+  #callback_btns {
+    width: calc(100% - 30px);
+    display: flex;
+    justify-content: space-around
+  }
+}
+
+@media (min-width:1400px) {
+  #callback_btns {
+    left: calc(50% + 450px);
+    z-index: 9999999
+  }
+}

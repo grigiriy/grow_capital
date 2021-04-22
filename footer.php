@@ -55,6 +55,8 @@
       </div>
     </div>
 
+    <?php get_template_part('theme-helpers/template-parts/sticky_btns'); ?>
+
     <!-- <div class="remodal" data-remodal-id="modal">
       <button data-remodal-action="close" class="remodal-close"></button>
       <h4>Обратный звонок</h4>
