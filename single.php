@@ -19,12 +19,12 @@ get_header(); ?>
         <div class="mb-20 hider-lg">
           <div class="h4 mb-20">Оглавление</div>
           <ul class="fs-s list-inline list-decor list-angle-right">
-            <?php
+          <?php
           set_query_var( 'post_id', $post->ID );
           get_template_part('theme-helpers/template-parts/contents','list'); ?>
           </ul>
         </div>
-        <?= get_the_content(); ?>
+        <?php the_content(); ?>
       </div>
     </div>
   </div>
