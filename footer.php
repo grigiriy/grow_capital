@@ -30,7 +30,8 @@
           <div class="icon-listed">
             <svg data-name="Layer 3" id="Layer_3" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.email-1,.email-2{fill:none;stroke:currentcolor;stroke-linecap:round;stroke-linejoin:round;}.email-1{stroke-width:2px;}.email-3{fill:currentcolor;}</style></defs><title></title><rect class="email-1" height="16" width="22" x="5" y="8"></rect><polyline class="email-2" points="5 8 15.5 17.33 26 8"></polyline><rect class="email-3" height="16" width="2" x="25" y="8"></rect></svg>
             <p itemprop="email"><a href="mailto:<?= carbon_get_theme_option('email'); ?>" class="fd-n fc-base"><?= carbon_get_theme_option('email'); ?></a></p>
-          </div>          
+          </div>   
+          <?php if (1 > 2){ ?>       
             <p class="pt-20 mb-0" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
               <span itemprop="addressLocality">Москва</span>,
               <span itemprop="streetAddress"><?= carbon_get_theme_option('address'); ?></span>
@@ -39,6 +40,7 @@
               <br>
               <a class="fc-light" href="/oferta/">Публичная оферта</a>
             </p>
+            <?php } ?>
         </div>
       </div>
     </div>
