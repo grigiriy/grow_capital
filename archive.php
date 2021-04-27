@@ -9,7 +9,7 @@ $loop_term_id = get_queried_object_id() !== 0 ? $cat->term_id : 'any';
     <div class="row mb-20 pt-40">
       <div class="col-xl-offset-3 col-xl-9 fs-xs fw-3">
         <?php if (get_queried_object_id() !== 0 && 1 > 2) { ?>
-          <a href="/blog/<?= $cat->slug;?>"><?= $cat->name; ?></a>
+          <a href="/category/znaniya-i-analitika/<?= $cat->slug;?>"><?= $cat->name; ?></a>
         <?php } else { ?>
           <a href="/">Главная</a>
         <?php } ?>
@@ -41,16 +41,15 @@ $loop_term_id = get_queried_object_id() !== 0 ? $cat->term_id : 'any';
         <div class="mb-30 pr-60">
           <ul class="fs-s mb-30 list-sidebar">
             <?php
-            $terms = get_terms(array(
-              'taxonomy' => 'category_blog_tax',
+            $blog_posts = get_posts(array(
+              'post_type'   => 'blog',
             ));
-            if($terms) {
+            if($blog_posts) {
             echo '<div class="fw-6 mb-f-07">Блог</div>';
-            foreach ($terms as $term) { ?>
-
+            foreach ($blog_posts as $blog_post) { ?>
               <li>
-                <a href="/blog/<?= $term->slug; ?>">
-                  <?= $term->name; ?>
+                <a href="/blog/<?= $blog_post->post_name; ?>">
+                  <?= $blog_post->post_title; ?>
                 </a>
               </li>
 
@@ -79,13 +78,6 @@ $loop_term_id = get_queried_object_id() !== 0 ? $cat->term_id : 'any';
               <?php $args = [
                 'orderby' => 'post_date',
                 'post_type' => 'blog',
-                  'tax_query' => [
-                    [
-                      'taxonomy' => 'category_blog_tax',
-                      'field' => 'id',
-                      'terms' => $loop_term_id,
-                    ]
-                  ],
                 'numberposts' => 10,
               ];
               if(get_posts($args)){

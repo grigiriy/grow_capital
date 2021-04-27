@@ -1230,7 +1230,7 @@ table:not(.table) td {
 
 .infobl .formula {
   width: auto;
-  max-width: 100%;
+  max-width: 500px;
   text-align: center;
 }
 
@@ -1246,7 +1246,6 @@ table:not(.table) td {
 .infobl p:not(class^='mt-') {
   margin: 0 0 1.2em;
 }
-
 
 .infobl figure {
   margin-bottom: 2em;
@@ -2714,7 +2713,7 @@ li.l7::before {
   }
   .px-40 {
     padding-right: 40px;
-    padding-left: 40px;  
+    padding-left: 40px;
   }
   .mg-10 {
     margin: 0.9375rem;
@@ -3041,7 +3040,10 @@ li.l7::before {
     z-index: 1000;
     padding-top: 0;
   }
-  .blockquote, blockquote { padding: 1.5em 0 1.5em 2em;}  
+  .blockquote,
+  blockquote {
+    padding: 1.5em 0 1.5em 2em;
+  }
   .logo-wrap {
     position: absolute;
   }
@@ -4072,14 +4074,14 @@ li.l7::before {
   .navigation-menu {
     margin-top: 7px;
   }
-    .blockquote, blockquote {
+  .blockquote,
+  blockquote {
     border-left: none;
     border-top: 2px solid #ffca17;
-    border-bottom: 2px solid #ffca17;    
+    border-bottom: 2px solid #ffca17;
     clear: both;
     padding: 1.5em 0 1.5em;
-    
-    }
+  }
 }
 
 @media (max-width: 575.8px) {
@@ -5870,7 +5872,7 @@ a.wa {
   width: 55px;
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
   #callback_btns {
     left: auto;
     right: 20px;
@@ -5882,17 +5884,22 @@ a.wa {
   }
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   #callback_btns {
     width: calc(100% - 30px);
     display: flex;
-    justify-content: space-around
+    justify-content: space-around;
   }
 }
 
-@media (min-width:1400px) {
+@media (min-width: 1400px) {
   #callback_btns {
     left: calc(50% + 450px);
-    z-index: 9999999
+    z-index: 9999999;
   }
+}
+
+.sticky {
+  position: sticky;
+  top: 60px;
 }
