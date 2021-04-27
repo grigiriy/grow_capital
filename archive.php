@@ -19,7 +19,7 @@ $loop_term_id = get_queried_object_id() !== 0 ? $cat->term_id : 'any';
 
       <div class="col-lg-3 hider-9">
         <div class="mb-30 pr-60">
-          <div class="fw-6 mb-f-07">Методические материалы</div>
+          <div class="fw-6 mb-f-07">Методические пособия</div>
           <ul class="fs-s mb-30 list-sidebar">
             <?php
             $args = [

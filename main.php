@@ -88,6 +88,7 @@ get_header(); ?>
   </div>
 </section>
 
+<?php if(1 > 2){ ?>
 <section class="mb-30">
   <div class="container-w">
     <h2 class="txt-c txt-l-9 mb-40">Отзывы участников образовательных программ</h2>
@@ -96,6 +97,7 @@ get_header(); ?>
     </div>
   </div>
 </section>
+<?php } ?>
 
 <section class="mb-60">
   <div class="container-w">
@@ -127,7 +129,7 @@ get_header(); ?>
 
         <div class="col-lg-4 mb-40">
           <p class="h5">
-            <a href="/services/" class="fc-link">Полезные сервисы</a>
+            <a href="<?= carbon_get_theme_option('services'); ?>" class="fc-link">Полезные сервисы</a>
           </p>
           <p class="fs-s">Доступны для зарегистрированных пользователей и участников образовательных программ
           </p>
