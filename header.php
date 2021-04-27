@@ -4,7 +4,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?= wp_kses(apply_filters('the_content', get_post_field('_genesis_title')), 'strip'); ?></title>
+
+  <title>
+  <?php
+  if (is_archive()){
+    $term_id = get_queried_object()->term_id;
+    echo carbon_get_term_meta($term_id,'meta_title');
+  } else {
+    echo wp_kses(apply_filters('the_content', get_post_field('_genesis_title')), 'strip');
+  }
+  ?>
+  </title>
   <?php wp_head() ?>
   <script src="https://yastatic.net/share2/share.js" async></script>
 
