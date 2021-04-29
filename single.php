@@ -25,6 +25,8 @@ get_header(); ?>
           </ul>
         </div>
         <?php the_content(); ?>
+
+        <?php get_template_part('theme-helpers/template-parts/author'); ?>
       </div>
     </div>
   </div>

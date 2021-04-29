@@ -15,7 +15,7 @@ get_header(); ?>
     <div class="row mb-30">
       <?php get_template_part('theme-helpers/template-parts/share', 'block'); ?>
       <div class="col-lg-12">
-        <div class="row">
+        <div class="row mb-30">
           <div class="col-lg-8 infobl">
             <h1><?= get_the_title(); ?></h1>
             <?= get_the_content(); ?>
@@ -135,9 +135,9 @@ get_header(); ?>
                 </a>
               </div>
             </div>
-
           </div>
         </div>
+        <?php get_template_part('theme-helpers/template-parts/author'); ?>
         <?php if (1 > 2) { ?>
           <div class="row bottom-widget">
 

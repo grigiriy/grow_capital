@@ -1468,6 +1468,7 @@ table:not(.table) td {
 }
 
 .facecrd figure,
+.facecrd-250 figure,
 .facecrd-125 figure,
 .facecrd-100 figure,
 .facecrd-75 figure,
@@ -1479,6 +1480,8 @@ table:not(.table) td {
 
 .facecrd figure img,
 .facecrd figure figcaption,
+.facecrd-250 figure img,
+.facecrd-250 figure figcaption,
 .facecrd-125 figure img,
 .facecrd-125 figure figcaption,
 .facecrd-100 figure img,
@@ -1502,10 +1505,22 @@ table:not(.table) td {
   width: 100%;
 }
 
+.facecrd-250 figure img {
+  max-width: 250px;
+  width: 100%;
+  height: 100%;
+}
+
+
 .facecrd-125 figure img {
   max-width: 125px;
   width: 100%;
   height: auto;
+}
+
+.facecrd-250 figure figcaption {
+  width: calc(100% - 250px);
+  padding-left: 1.125rem;
 }
 
 .facecrd-125 figure figcaption {
@@ -4306,6 +4321,7 @@ li.l7::before {
   }
 
   .facecrd figure,
+  .facecrd-250 figure,
   .facecrd-125 figure,
   .facecrd-100 figure,
   .facecrd-75 figure,
@@ -4314,8 +4330,17 @@ li.l7::before {
   .facecrd-50 figure {
     display: flex;
   }
+  
+  .facecrd-250 figure img {
+    max-width: none;
+  }
+
+  .facecrd-250 figure {
+    flex-direction: column;
+  }
 
   .facecrd,
+  .facecrd-250,
   .facecrd-125,
   .facecrd-100,
   .facecrd-75,
@@ -4328,6 +4353,8 @@ li.l7::before {
 
   .facecrd figure img,
   .facecrd figure figcaption,
+  .facecrd-250 figure img,
+  .facecrd-250 figure figcaption,
   .facecrd-125 figure img,
   .facecrd-125 figure figcaption,
   .facecrd-100 figure img,
@@ -4344,6 +4371,7 @@ li.l7::before {
   }
 
   .facecrd figure figcaption,
+  .facecrd-250 figure figcaption,
   .facecrd-125 figure figcaption,
   .facecrd-100 figure figcaption,
   .facecrd-75 figure figcaption,
@@ -4358,6 +4386,7 @@ li.l7::before {
     max-width: 28%;
     width: 28%;
   } */
+
   .facecrd-125 figure figcaption {
     width: 72%;
     padding-left: 1.125rem;
